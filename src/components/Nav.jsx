@@ -1,4 +1,4 @@
-import styles from './componentcss/Nav.module.css';
+import styles from './componentcss/nav.module.css';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import ToggleLinks from './ToggleLinks';
