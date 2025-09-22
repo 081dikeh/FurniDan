@@ -1,0 +1,47 @@
+.contactInputInfo {
+    padding: 0 3.12em;
+    width: 100%;
+
+}
+.contactInputInfo form{
+    display: flex;
+    flex-direction: column;
+    gap: 2.25em;
+    width: 100%;
+}
+.inputContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1.375em;
+}
+.inputContainer label{
+    color: #000;
+    font-family: poppins, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+.inputContainer input, .inputContainer textarea{
+    color: #4a4a4a;
+    font-family: poppins, sans-serif;
+    font-size: 16px;
+    outline: none;
+    padding: 1.6em 1.89em;
+    border-radius: 10px;
+    border: 2px solid #9F9F9F;
+    background: #FFF;
+}
+.inputContainer input[type="email"] {
+    margin-right: 0;
+}
+
+.contactBtn {
+    margin-right: auto;
+    border-radius: 5px;
+    border: 1px solid #B88E2F;
+    background: #B88E2F;
+    color: #FFF;
+    font-family: poppins, sans-serif;
+    font-size: 16px;
+    padding: 0.87em 5.56em;
+    cursor: pointer;
+}

@@ -1,0 +1,62 @@
+.productSort{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #F9F1E7;
+  padding: 1.4em 6.3em;
+  margin-bottom: 3em;
+}
+.filter {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.filterText{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #000;
+  font-family: poppins, sans-serif;
+  font-size: 20px;
+}
+button {
+  background: none;
+  border: none;
+}
+button img {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+.filterNum {
+  color: #000;
+  font-family: poppins, sans-serif;
+  font-size: 16px;
+}
+.sortBy {
+  color: #000;
+  font-family: poppins, sans-serif;
+  font-size: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 1.8em;
+}
+.sortBy div{
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+}
+#cardsToShow, #sortBy {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  outline: none;
+  background: #fff;
+  border: none;
+  color: #9F9F9F;
+  font-family: poppins, sans-serif;
+  font-size: 20px;
+  text-align: center;
+  padding: 0.8em;
+}

@@ -1,0 +1,65 @@
+.productContainer {
+   cursor: pointer;
+   position: relative;
+}
+.imgDescription {
+    position: relative;
+    width: 100%;
+    z-index: -10;
+}
+.imgDescription img{
+    display: block;
+    width: 100%;
+}
+.discountTagContainer, .newTagContainer {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    display: grid;
+    place-items: center;
+}
+.discountTag, .newTag {
+    color: white;
+    font-size: 16px;
+}
+.discountTagContainer {
+    background-color: #E97171;
+}
+.newTagContainer {
+    background-color: #2EC1AC;
+}
+.textDescription {
+    padding: 1em 1em 1.5em;
+    font-family: poppins, sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8em;
+    background-color: #edebebe4;
+    position: relative;
+    z-index: -15;
+}
+.textDescription h2 {
+    font-size: 24px;
+    color: #1d0707;
+    font-weight: semibold;
+}
+.textDescription p{
+    font-size: 16px;
+    color: #595959;
+}
+.textDescription .price {
+    font-size: 20px;
+    color: #1d0707;
+    font-weight: semibold;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.textDescription .price span {
+    font-size: 16px;
+    color: #989898;
+    text-decoration: line-through;
+}

@@ -1,0 +1,55 @@
+.productPopup {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 10;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    padding: 1.5em;
+    cursor: pointer;
+}
+.popUpBtnsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+}
+.addToCartButton, .detailsButton, .popUpBtnsContainer button {
+    background: #fff;
+    border: none;
+    color: #B88E2F;
+    padding: 1em 3.5em;
+    font-size: 16px;
+    font-weight: semibold;
+    cursor: pointer;
+    outline: none;
+
+}
+.popupLinksContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.popupLinksContainer button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.2em;
+    font-family: poppins, sans-serif;
+    font-weight: semibold;
+}
+.popupLinksContainer button img{
+    height: 16px;
+    width: 16px;
+}

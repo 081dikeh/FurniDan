@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em 3em;
+/*     position: relative; */
+    box-shadow: 0 8px 16px -4px rgba(0,0,0,0.15);
+    width: 100%;
+    box-sizing: border-box;
+    position: fixed;
+    background-color: #fff;
+    opacity: 0.9;
+    z-index: 50;
+    top: 0;
+}
+.logo a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo a span{
+    font-size: 34px;
+    font-weight: bold;
+    color: #000;
+    font-family: "Montserrat", sans-serif;
+}
+.navLinks, .navIcons {
+    display: flex;
+    gap: 2em;
+}
+
+.navLinks li a {
+    color: #000;
+    font-size: 16px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+}
+
+.navIcons button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.navIcons button img{
+    max-width: 24px;
+}
+.menuBtnContainer{
+    z-index: 100;
+    display: none;
+}
+.menuBtn {
+    background: none;
+    border: none;
+}
+.menuBtn img {
+    width: 24px;
+    height: 24px;
+}
+
+@media screen and (max-width: 900px) {
+    .nav {
+        gap: 3em;
+        padding: 1em 1.5em;
+    }
+    .logo {
+        margin-right: auto;
+    }
+    .logo a img{
+        max-height: 30px;
+        width: auto;
+    }
+    .logo a span{
+        font-size: 24px;
+    }
+    .navLinks {
+        display: none;
+    }
+    .navLinks, .navIcons {
+        gap: 1em;
+    }
+    .menuBtnContainer {
+        display: block;
+    }
+    
+}
+@media screen and (max-width: 500px) {
+    .disNone {
+        display: none;
+    }
+}

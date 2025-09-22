@@ -1,0 +1,32 @@
+.guarantee {
+    background: #FAF3EA;
+    padding: 6.25em 3.12em;
+    margin-top: 5.3em;
+    display: flex;
+    justify-content: space-between;
+}
+.guarantee .guaranteeContent{
+    display: flex;
+    gap: 10px;
+}
+.guarantee .guaranteeContent img{
+    width: 60px;
+    height: 60px
+}
+.text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.text h3{
+    color: #242424;
+    font-family: poppins, sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+}
+.text span{
+    color: #898989;
+    font-family: poppins, sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+}

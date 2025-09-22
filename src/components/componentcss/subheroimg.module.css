@@ -1,0 +1,12 @@
+.shopHero {
+  width: 100%;
+  height: 50vh;
+  background-image: url('/assets/shopheroimg.png');
+  background-size: cover;
+  background-position: center;
+  display: grid;
+  place-items: center;
+}
+.shopHero h1{
+  font: 48px poppins, sans-serif #000;
+}

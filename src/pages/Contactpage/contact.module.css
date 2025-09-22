@@ -1,0 +1,59 @@
+.contactHead {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 7px;
+    text-align: center;
+    padding-top: 6.12em;
+    padding-bottom: 6.12em;
+}
+.contactHead h2{
+    color: #000;
+    font-family: poppins, sans-serif;
+    font-size: 36px;
+    font-weight: 600;
+}
+.contactHead p{
+    max-width: 600px;
+    color: #9F9F9F;
+    font-family: poppins, sans-serif;
+    font-size: 16px;
+}
+
+.contactInfo {
+    padding: 0 12em;
+    display: flex;
+    gap: 1.8em;
+
+}
+
+.contactTextInfo {
+    display: flex;
+    gap: 2.6em;
+    flex-direction: column;
+}
+
+.info {
+    display: flex;
+    gap: 2em;
+    padding: 0 3em;
+}
+.info .img img{
+    width: 22px;
+}
+.info .text h3{
+    color: #000;
+    font-family: poppins, sans-serif;
+    font-size: 24px;
+
+}
+.info .text p{
+    color: #000;
+    font-family: poppins, sans-serif;
+    font-size: 16px;
+}
+
+.contactInputInfo {
+    width: 100%;
+}

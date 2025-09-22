@@ -1,0 +1,34 @@
+.productInfoContainer {
+    margin-top: 4.187em;
+    padding: 0 6.2em 4.1em;
+
+}
+
+.productInfohead {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3.25em;
+    margin-bottom: 2.3em;
+}
+.productInfohead h3{
+    color: #9F9F9F;
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+}
+.productinfoText{
+    padding: 0 7em;
+}
+.productinfoText p{
+    color: #9F9F9F;
+    text-align: justify;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+}
+.productinfoTextImg {
+    display: flex;
+    justify-content: space-between;
+    gap: 2em;
+    margin-top: 3.75em;
+}
