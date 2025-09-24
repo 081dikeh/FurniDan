@@ -1,29 +1,31 @@
 import SubHeroImg from "../../components/SubHeroImg";
 import Guarantees from "../../components/Guarantees";
+import CartItems from "./CartItems";
 
-export default function CartPage({ cartItems, quantity }) {
+export default function CartPage({ cartItems, quantity, setQuantity, updateCartItemQuantity }) {
 
   return (
     <div>
       <SubHeroImg pageName={"Cart"} />
       <div className="cartItems">
-        {cartItems.length === 0 ? 'Empty Cart' : (
-        <div>
-          {cartItems.map((item, index) => (
-            <div key={index}>
-              <img src={item.image} alt={item.name} />
-              <h3>{item.name}</h3>
-              <p>${`${item.price * quantity}`}</p>
-              <button>Remove</button>
-              <div className="quantity">
-                <button>-</button>
-                <span>{quantity}</span>
-                <button>+</button>
+        {/* {cartItems.length === 0 ? 'Empty Cart' : (
+          <div>
+            {cartItems.map((item, index) => (
+              <div key={index}>
+                <img src={item.image} alt={item.name} />
+                <h3>{item.name}</h3>
+                <p>{`Rp ${(item.price * quantity).toLocaleString('de-DE')}`}</p>
+                <button>Remove</button>
+                <div className="quantity">
+                  <button>-</button>
+                  <span>{quantity}</span>
+                  <button>+</button>
+                </div>
               </div>
-            </div>
-          ))}
-        </div>
-      )}
+            ))}
+          </div>
+        )} */}
+        <CartItems cartItems={cartItems} quantity={quantity} setQuantity={setQuantity} updateCartItemQuantity={updateCartItemQuantity} />
       </div>
       <Guarantees />    
     </div>

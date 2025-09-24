@@ -38,7 +38,7 @@ export default function Product({ product, addToCart }) {
                 <h2>{product.name}</h2>
                 <p>{product.type}</p>
                 <p className={styles.price}>
-                    {product.price}
+                    {`Rp ${product.price.toLocaleString('id-ID')}`}
                     {product.priceDiscount.isTrue ? <span>{product.priceDiscount.slicedPrice}</span> : ''}
                 </p>
             </div>

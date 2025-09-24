@@ -6,7 +6,7 @@ import ProductInfo from "./ProductInfo";
 import RelatedProducts from "./RelatedProducts";
 
 
-export default function SingleProduct({ productIds, productsToShow, setCardsToShow, cardsToShow, addToCart, quantity, setQuantity }) {
+export default function SingleProduct({ productIds, productsToShow, setCardsToShow, cardsToShow, addToCart, quantity, setQuantity, updateCartItemQuantity }) {
     const { productId } = useParams();
 
     const product = ProductData.find(
@@ -34,7 +34,7 @@ export default function SingleProduct({ productIds, productsToShow, setCardsToSh
                     </div>
                 </div>
 
-                <ProductDetails product={product} addToCart={addToCart} quantity={quantity} setQuantity={setQuantity} />
+                <ProductDetails product={product} addToCart={addToCart} quantity={quantity} setQuantity={setQuantity} updateCartItemQuantity={updateCartItemQuantity} />
             </div>   
 
             <ProductInfo />

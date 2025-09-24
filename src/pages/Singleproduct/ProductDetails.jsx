@@ -42,7 +42,8 @@ export default function ProductDetails({ product, addToCart, quantity, setQuanti
                         <button onClick={ () => setCartCount(cartCount + 1)}>+</button>
                     </div>
                     <div className={styles.addandcompare}>
-                        <AddToCartBtn title="Add to Cart" addToCart={addToCart} product={product} />
+                        <AddToCartBtn title="Add to Cart" addToCart={() => addToCart({ ...product, quantity: cartCount })}
+                        product={product} />
                         <CompareBtn title="+ Compare" />
                     </div>
                     

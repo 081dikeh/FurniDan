@@ -17,7 +17,7 @@ const ourProducts = [
         name: 'Syltherine',
         image: productImg1,
         type: 'Stylish cafe chair',
-        price: 2.500,
+        price: 2500000,
         StarRating: stars,
         priceDiscount: {
             isTrue: true,
@@ -37,11 +37,11 @@ const ourProducts = [
         name: 'Leviosa',
         image: productImg2,
         type: 'Stylish cafe chair',
-        price: 'Rp 2.500.000',
+        price: 2500000,
         StarRating: stars,
         priceDiscount: {
             isTrue: false,
-            slicedPrice: 'Rp 3.500.000'
+            slicedPrice: 3500000,
         },
         discounted: {
             isTrue: false,
@@ -57,7 +57,7 @@ const ourProducts = [
         name: 'Lolito',
         image: productImg3,
         type: 'Luxury big sofa',
-        price: 'Rp 7.000.000',
+        price: 7000000,
         StarRating: stars,
         priceDiscount: {
             isTrue: true,
@@ -77,7 +77,7 @@ const ourProducts = [
         name: 'Respira',
         image: productImg4,
         type: 'Outdoor bar table and stool',
-        price: 'Rp 500.000',
+        price: 500000,
         priceDiscount: {
             isTrue: false,
             slicedPrice: 'Rp 14.000.000'
@@ -97,7 +97,7 @@ const ourProducts = [
         name: 'Grifo',
         image: productImg5,
         type: 'Night lamp',
-        price: 'Rp 1.500.000',
+        price: 1500000,
         StarRating: stars,
         priceDiscount: {
             isTrue: false,
@@ -117,7 +117,7 @@ const ourProducts = [
         name: 'Muggo',
         image: productImg6,
         type: 'Small mug',
-        price: 'Rp 150.000',
+        price: 150000,
         StarRating: stars,
         priceDiscount: {
             isTrue: false,
@@ -137,7 +137,7 @@ const ourProducts = [
         name: 'Pingky',
         image: productImg7,
         type: 'Cute bed set',
-        price: 'Rp 7.000.000',
+        price: 7000000,
         StarRating: stars,
         priceDiscount: {
             isTrue: true,
@@ -157,7 +157,7 @@ const ourProducts = [
         name: 'Potty',
         image: productImg8,
         type: 'Minimalist flower pot',
-        price: 'Rp 500.000',
+        price: 500000,
         StarRating: stars,
         priceDiscount: {
             isTrue: false,
@@ -177,7 +177,7 @@ const ourProducts = [
         name: 'Syltherine',
         image: productImg1,
         type: 'Stylish cafe chair',
-        price: 'Rp 2.500.000',
+        price: 2500000,
         StarRating: stars,
         priceDiscount: {
             isTrue: true,
@@ -197,7 +197,7 @@ const ourProducts = [
         name: 'Leviosa',
         image: productImg2,
         type: 'Stylish cafe chair',
-        price: 'Rp 2.500.000',
+        price: 2500000,
         StarRating: stars,
         priceDiscount: {
             isTrue: false,
@@ -217,7 +217,7 @@ const ourProducts = [
         name: 'Lolito',
         image: productImg3,
         type: 'Luxury big sofa',
-        price: 'Rp 7.000.000',
+        price: 7000000,
         StarRating: stars,
         priceDiscount: {
             isTrue: true,
@@ -237,7 +237,7 @@ const ourProducts = [
         name: 'Respira',
         image: productImg4,
         type: 'Outdoor bar table and stool',
-        price: 'Rp 500.000',
+        price: 500000,
         StarRating: stars,
         priceDiscount: {
             isTrue: false,
@@ -257,7 +257,7 @@ const ourProducts = [
         name: 'Grifo',
         image: productImg5,
         type: 'Night lamp',
-        price: 'Rp 1.500.000',
+        price: 1500000,
         StarRating: stars,
         priceDiscount: {
             isTrue: false,
@@ -277,7 +277,7 @@ const ourProducts = [
         name: 'Muggo',
         image: productImg6,
         type: 'Small mug',
-        price: 'Rp 150.000',
+        price: 150000,
         StarRating: stars,
         priceDiscount: {
             isTrue: false,
@@ -297,7 +297,7 @@ const ourProducts = [
         name: 'Pingky',
         image: productImg7,
         type: 'Cute bed set',
-        price: 'Rp 7.000.000',
+        price: 7000000,
         StarRating: stars,
         priceDiscount: {
             isTrue: true,
@@ -317,7 +317,7 @@ const ourProducts = [
         name: 'Potty',
         image: productImg8,
         type: 'Minimalist flower pot',
-        price: 'Rp 500.000',
+        price: 500000,
         StarRating: stars,
         priceDiscount: {
             isTrue: false,

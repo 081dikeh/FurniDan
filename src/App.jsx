@@ -29,12 +29,12 @@ function App() {
         //setQuantity(quantity + 1);
         return prevCartItems.map(item =>
           item.id === product.id
-            ? { ...item, quantity: item.quantity + 1 }
+            ? { ...item, quantity: item.quantity + (product.quantity || 1) }
             : item
         );
       } else {
         // Add new product with quantity 1
-        return [...prevCartItems, { ...product, quantity: 1 }];
+        return [...prevCartItems, { ...product, quantity: product.quantity || 1  }];
       }
     });
 
@@ -42,6 +42,17 @@ function App() {
     useEffect(() => {
       console.log("Cart Items:", cartItems);
     }, [cartItems]);
+
+    const updateCartItemQuantity = (productId, newQuantity) => {
+      setCartItems(prevCartItems =>
+        prevCartItems.map(item =>
+          item.id === productId
+            ? { ...item, quantity: newQuantity }
+            : item
+        )
+      );
+    };
+
 
   return (
     <div className="App">
@@ -75,10 +86,11 @@ function App() {
               setQuantity={setQuantity}
               addToCart={addToCart}
               quantity={quantity}
+              updateCartItemQuantity={updateCartItemQuantity}
             />
           }
         />
-        <Route path="/cartpage" element={<CartPage cartItems={cartItems} quantity={quantity} />} />
+        <Route path="/cartpage" element={<CartPage cartItems={cartItems} quantity={quantity} setQuantity={setQuantity} updateCartItemQuantity={updateCartItemQuantity} />} />
       </Routes>
 
       {isTrue ? (
