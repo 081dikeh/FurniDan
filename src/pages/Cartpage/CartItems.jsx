@@ -1,6 +1,8 @@
 import styles from './cartpagecss/cartitem.module.css'
+import RemoveFromCart from '../../components/removeFromCartBtn'
+import CheckoutBtn from '../../components/CheckoutBtn'
 
-export default function CartItems({ cartItems, updateCartItemQuantity }) {
+export default function CartItems({ cartItems, updateCartItemQuantity, removeFromCart }) {
     return ( 
 
         <div className={styles.cartItemContainer}>
@@ -29,13 +31,24 @@ export default function CartItems({ cartItems, updateCartItemQuantity }) {
                                 </div>
                             </div>
                             <div><p>{`Rp ${(item.price * item.quantity).toLocaleString('de-DE')}`}</p></div>
-                            <div><p>Delete</p></div>
+                            <div>
+                                <RemoveFromCart title="Remove" removeFromCart={() => removeFromCart(item.id)} />
+                            </div>
                         </div>
                     ))
                 }
                       
             </div>
-            <div className={styles.cartCheckout}></div>
+            <div className={styles.cartCheckout}>
+                <div className={styles.cartCheckoutContainer}>
+                    <h2>Cart Totals</h2>
+                    <div className={styles.cartTotal}>
+                        <p>Subtotal <span> </span></p>
+                        <p>Total <span> </span></p>
+                    </div>
+                    <CheckoutBtn title={"Checkout"}/>
+                </div>
+            </div>
         </div>
     )
 

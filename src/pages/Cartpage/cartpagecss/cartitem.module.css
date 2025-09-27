@@ -1,5 +1,9 @@
 .cartItemContainer {
     padding: 4.5em 6.25em;
+    display: flex;
+    justify-content: space-between;
+    gap: 2em;
+    flex-wrap: wrap;
 }
 .cartArray {
     display: flex;
@@ -50,4 +54,11 @@
     font-size: 16px;
     padding: 10px 10px;
     cursor: pointer;
+}
+
+/* cartcheckout */
+.cartCheckout {
+    padding: 15px 75px 80px;
+    background: #F9F1E7;
+    display: block;
 }

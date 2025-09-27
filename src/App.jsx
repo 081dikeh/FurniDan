@@ -41,11 +41,12 @@ function App() {
   });
 };
 
-removeFromCart = (productId) => {
+const removeFromCart = (productId) => {
   setCartItems(prevCartItems =>
     prevCartItems.filter(item => item.id !== productId)
   );
 };
+
 
 
 const updateCartItemQuantity = (productId, newQuantity) => {
@@ -102,6 +103,7 @@ const updateCartItemQuantity = (productId, newQuantity) => {
           <CartPage 
             cartItems={cartItems} 
             updateCartItemQuantity={updateCartItemQuantity} 
+            removeFromCart={removeFromCart}
             />
           } 
         />
@@ -114,6 +116,7 @@ const updateCartItemQuantity = (productId, newQuantity) => {
           setIsTrue={setIsTrue} 
           cartItems={cartItems} 
           updateCartItemQuantity={updateCartItemQuantity}
+          removeFromCart={removeFromCart}
         />
       ) : ("")}
       <Footer />

@@ -2,14 +2,14 @@ import SubHeroImg from "../../components/SubHeroImg";
 import Guarantees from "../../components/Guarantees";
 import CartItems from "./CartItems";
 
-export default function CartPage({ cartItems, updateCartItemQuantity }) {
+export default function CartPage({ cartItems, updateCartItemQuantity, removeFromCart }) {
 
   return (
     <div>
       <SubHeroImg pageName={"Cart"} />
       <div className="cartItems">
         
-        <CartItems cartItems={cartItems} updateCartItemQuantity={updateCartItemQuantity} />
+        <CartItems cartItems={cartItems} updateCartItemQuantity={updateCartItemQuantity} removeFromCart={removeFromCart} />
       </div>
       <Guarantees />    
     </div>

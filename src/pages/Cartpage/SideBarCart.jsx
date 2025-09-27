@@ -3,8 +3,9 @@ import removeCartBtn from '../../assets/cartpage-assets/cancelcartbtn.png'
 import AddToCartBtn from "../../components/AddToCartBtn";
 import CompareBtn from "../../components/CompareBtn";
 import CheckoutBtn from "../../components/CheckoutBtn";
+import RemoveFromCart from "../../components/removeFromCartBtn";
 
-export default function SideBarCart( { productIds, isTrue, setIsTrue, cartItems, updateCartItemQuantity } ) {
+export default function SideBarCart( { productIds, isTrue, setIsTrue, cartItems, updateCartItemQuantity, removeFromCart} ) {
   return ( 
     <div className={styles.sideBar}>
         <div className={styles.sidebarcartContainer}>
@@ -26,7 +27,7 @@ export default function SideBarCart( { productIds, isTrue, setIsTrue, cartItems,
                         <h3>{item.name}</h3>
                         <p>{item.quantity}  x $ <span>{`${item.price}`}</span></p>
                       </div>                      
-                        <button><img src={removeCartBtn} alt="" /></button>
+                        <RemoveFromCart title={<img src={removeCartBtn} alt="" />} removeFromCart={() => removeFromCart(item.id)} />
                     </div>
                   ))}
                 </div>

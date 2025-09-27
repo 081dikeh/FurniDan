@@ -1,4 +1,4 @@
-import styles from './Homepage.module.css';
+import styles from './homepage.module.css';
 import Range from './homepage-components/Range'
 import OurProduct from './homepage-components/productFolder/OurProduct';
 import ShareSetup from './homepage-components/ShareSetup';
