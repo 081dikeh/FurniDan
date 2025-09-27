@@ -1,5 +1,5 @@
 import Products from "./Products";
-import styles from './productcssfolder/ourProduct.module.css';
+import styles from './productcssfolder/ourproduct.module.css';
 import { Link } from 'react-router-dom';
 import ShowMoreBtn from "../../../../components/ShowMoreBtn";
 
