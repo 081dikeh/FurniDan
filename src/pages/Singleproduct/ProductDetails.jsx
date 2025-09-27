@@ -3,10 +3,10 @@ import { useState } from 'react';
 import AddToCartBtn from '../../components/AddToCartBtn';
 import CompareBtn from '../../components/CompareBtn';
 
-export default function ProductDetails({ product, addToCart, quantity, setQuantity }) {
-
-    const [cartCount, setCartCount] = useState(1);
-    setQuantity(cartCount);
+export default function ProductDetails({ product, addToCart, cartItems, updateCartItemQuantity, cartCount, setCartCount }) {
+    const cartItem = cartItems.find(item => item.id === product.id);
+    //const cartCount = cartItem ? cartItem.quantity : 1;
+ 
     return (
         <div>
             <div className={styles.singleProductDetails}>
@@ -37,9 +37,9 @@ export default function ProductDetails({ product, addToCart, quantity, setQuanti
                 </div>
                 <div className={styles.singleProductButtons}>
                     <div className={styles.productCounter}>
-                        <button onClick={ () => setCartCount(cartCount - 1)}>-</button>
-                        <span>{ cartCount }</span>
-                        <button onClick={ () => setCartCount(cartCount + 1)}>+</button>
+                        <button onClick={() => setCartCount(cartCount - 1)}>-</button>
+                        <span>{cartCount}</span>
+                        <button onClick={() => setCartCount(cartCount + 1)}>+</button>
                     </div>
                     <div className={styles.addandcompare}>
                         <AddToCartBtn title="Add to Cart" addToCart={() => addToCart({ ...product, quantity: cartCount })}

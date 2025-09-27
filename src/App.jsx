@@ -19,39 +19,46 @@ function App() {
 
   //for the cartfunctionality
   const [cartItems, setCartItems] = useState([])
-  const [quantity, setQuantity] = useState(1)
+  const [cartCount, setCartCount] = useState(1);
   const isadded = false
-  const addToCart = (product) => {
-    setCartItems(prevCartItems => {
-      const existingItem = prevCartItems.find(item => item.id === product.id);
-      if (existingItem) {
-        // Increase quantity if product already in cart
-        //setQuantity(quantity + 1);
-        return prevCartItems.map(item =>
-          item.id === product.id
-            ? { ...item, quantity: item.quantity + (product.quantity || 1) }
-            : item
-        );
-      } else {
-        // Add new product with quantity 1
-        return [...prevCartItems, { ...product, quantity: product.quantity || 1  }];
-      }
-    });
 
-  };
-    useEffect(() => {
-      console.log("Cart Items:", cartItems);
-    }, [cartItems]);
-
-    const updateCartItemQuantity = (productId, newQuantity) => {
-      setCartItems(prevCartItems =>
-        prevCartItems.map(item =>
-          item.id === productId
-            ? { ...item, quantity: newQuantity }
-            : item
-        )
+  const addToCart = (product, quantity = 0) => {
+  quantity = quantity + cartCount; // Use the local state for quantity 
+  setCartCount(1); // Reset local state after adding to cart
+  setCartItems(prevCartItems => {
+    const existingItem = prevCartItems.find(item => item.id === product.id);
+    if (existingItem) {
+      // If already in cart, increase its quantity
+      return prevCartItems.map(item =>
+        item.id === product.id
+          ? { ...item, quantity: item.quantity + quantity }
+          : item
       );
-    };
+    } else {
+      // If not in cart, add with specified quantity
+      return [...prevCartItems, { ...product, quantity }];
+    }
+  });
+};
+
+removeFromCart = (productId) => {
+  setCartItems(prevCartItems =>
+    prevCartItems.filter(item => item.id !== productId)
+  );
+};
+
+
+const updateCartItemQuantity = (productId, newQuantity) => {
+  setCartItems(prevCartItems =>
+    prevCartItems.map(item =>
+      item.id === productId
+        ? { ...item, quantity: newQuantity }
+        : item
+    )
+  );
+  console.log(productId, newQuantity);
+};
+    
 
 
   return (
@@ -83,18 +90,31 @@ function App() {
               productsToShow={productsToShow}
               setCardsToShow={setCardsToShow}
               cardsToShow={cardsToShow}
-              setQuantity={setQuantity}
               addToCart={addToCart}
-              quantity={quantity}
+              cartItems={cartItems}
               updateCartItemQuantity={updateCartItemQuantity}
+              cartCount={cartCount}
+              setCartCount={setCartCount}
             />
           }
         />
-        <Route path="/cartpage" element={<CartPage cartItems={cartItems} quantity={quantity} setQuantity={setQuantity} updateCartItemQuantity={updateCartItemQuantity} />} />
+        <Route path="/cartpage" element={
+          <CartPage 
+            cartItems={cartItems} 
+            updateCartItemQuantity={updateCartItemQuantity} 
+            />
+          } 
+        />
       </Routes>
 
       {isTrue ? (
-        <SideBarCart productIds={productIds} isTrue={isTrue} setIsTrue={setIsTrue} cartItems={cartItems} quantity={quantity} />
+        <SideBarCart 
+          productIds={productIds} 
+          isTrue={isTrue} 
+          setIsTrue={setIsTrue} 
+          cartItems={cartItems} 
+          updateCartItemQuantity={updateCartItemQuantity}
+        />
       ) : ("")}
       <Footer />
     </div>
@@ -102,3 +122,6 @@ function App() {
 }
 
 export default App;
+
+
+

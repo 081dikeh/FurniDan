@@ -2,35 +2,46 @@ import SubHeroImg from "../../components/SubHeroImg";
 import Guarantees from "../../components/Guarantees";
 import CartItems from "./CartItems";
 
-export default function CartPage({ cartItems, quantity, setQuantity, updateCartItemQuantity }) {
+export default function CartPage({ cartItems, updateCartItemQuantity }) {
 
   return (
     <div>
       <SubHeroImg pageName={"Cart"} />
       <div className="cartItems">
-        {/* {cartItems.length === 0 ? 'Empty Cart' : (
-          <div>
-            {cartItems.map((item, index) => (
-              <div key={index}>
-                <img src={item.image} alt={item.name} />
-                <h3>{item.name}</h3>
-                <p>{`Rp ${(item.price * quantity).toLocaleString('de-DE')}`}</p>
-                <button>Remove</button>
-                <div className="quantity">
-                  <button>-</button>
-                  <span>{quantity}</span>
-                  <button>+</button>
-                </div>
-              </div>
-            ))}
-          </div>
-        )} */}
-        <CartItems cartItems={cartItems} quantity={quantity} setQuantity={setQuantity} updateCartItemQuantity={updateCartItemQuantity} />
+        
+        <CartItems cartItems={cartItems} updateCartItemQuantity={updateCartItemQuantity} />
       </div>
       <Guarantees />    
     </div>
   );
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* const Cart = ({ cartItems, quantity }) => {
   console.log(cartItems)
@@ -60,3 +71,21 @@ export default function CartPage({ cartItems, quantity, setQuantity, updateCartI
 }
 
 export default Cart */
+
+{/* {cartItems.length === 0 ? 'Empty Cart' : (
+          <div>
+            {cartItems.map((item, index) => (
+              <div key={index}>
+                <img src={item.image} alt={item.name} />
+                <h3>{item.name}</h3>
+                <p>{`Rp ${(item.price * quantity).toLocaleString('de-DE')}`}</p>
+                <button>Remove</button>
+                <div className="quantity">
+                  <button>-</button>
+                  <span>{quantity}</span>
+                  <button>+</button>
+                </div>
+              </div>
+            ))}
+          </div>
+        )} */}

@@ -6,13 +6,13 @@ import ProductInfo from "./ProductInfo";
 import RelatedProducts from "./RelatedProducts";
 
 
-export default function SingleProduct({ productIds, productsToShow, setCardsToShow, cardsToShow, addToCart, quantity, setQuantity, updateCartItemQuantity }) {
+export default function SingleProduct({ productIds, productsToShow, setCardsToShow, cardsToShow, addToCart, updateCartItemQuantity, cartItems, cartCount, setCartCount }) {
     const { productId } = useParams();
 
     const product = ProductData.find(
         (p) => String(p.id) === String(productId)
     );
-    console.log(productIds);
+
     return (
         <div className={styles.singleProduct}>
             <div className={styles.routeToSingleProductContainer}>
@@ -34,7 +34,7 @@ export default function SingleProduct({ productIds, productsToShow, setCardsToSh
                     </div>
                 </div>
 
-                <ProductDetails product={product} addToCart={addToCart} quantity={quantity} setQuantity={setQuantity} updateCartItemQuantity={updateCartItemQuantity} />
+                <ProductDetails product={product} addToCart={addToCart} updateCartItemQuantity={updateCartItemQuantity} cartItems={cartItems} cartCount={cartCount} setCartCount={setCartCount}/>
             </div>   
 
             <ProductInfo />

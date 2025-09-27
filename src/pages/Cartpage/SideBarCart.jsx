@@ -4,7 +4,7 @@ import AddToCartBtn from "../../components/AddToCartBtn";
 import CompareBtn from "../../components/CompareBtn";
 import CheckoutBtn from "../../components/CheckoutBtn";
 
-export default function SideBarCart( { productIds, isTrue, setIsTrue, cartItems, quantity } ) {
+export default function SideBarCart( { productIds, isTrue, setIsTrue, cartItems, updateCartItemQuantity } ) {
   return ( 
     <div className={styles.sideBar}>
         <div className={styles.sidebarcartContainer}>
@@ -24,7 +24,7 @@ export default function SideBarCart( { productIds, isTrue, setIsTrue, cartItems,
                       <img className={styles.sideBarcartImg} src={item.image} alt={item.name} />
                       <div className={styles.sideBarcartdetails}>
                         <h3>{item.name}</h3>
-                        <p> {quantity} x $ <span>{`${item.price}`}</span></p>
+                        <p>{item.quantity}  x $ <span>{`${item.price}`}</span></p>
                       </div>                      
                         <button><img src={removeCartBtn} alt="" /></button>
                     </div>

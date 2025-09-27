@@ -1,6 +1,6 @@
 import styles from './cartpagecss/cartitem.module.css'
 
-export default function CartItems({ cartItems, quantity, setQuantity, updateCartItemQuantity }) {
+export default function CartItems({ cartItems, updateCartItemQuantity }) {
     return ( 
 
         <div className={styles.cartItemContainer}>
@@ -28,7 +28,7 @@ export default function CartItems({ cartItems, quantity, setQuantity, updateCart
                                     <button onClick={() => updateCartItemQuantity(item.id, item.quantity + 1)}>+</button>
                                 </div>
                             </div>
-                            <div><p>{`Rp ${(item.price * quantity).toLocaleString('de-DE')}`}</p></div>
+                            <div><p>{`Rp ${(item.price * item.quantity).toLocaleString('de-DE')}`}</p></div>
                             <div><p>Delete</p></div>
                         </div>
                     ))
