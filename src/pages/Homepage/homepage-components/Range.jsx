@@ -2,7 +2,7 @@ import styles from './range.module.css';
 
 import livingRoom from '../../../assets/home-page-assets/living-room.png';
 import bedroom from '../../../assets/home-page-assets/bedroom.png';
-import diningRoom from '../../../assets/home-page-assets/Dining';
+import diningRoom from '../../../assets/home-page-assets/Dining.png';
 
 
 export default function Range() {
