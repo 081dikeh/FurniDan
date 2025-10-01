@@ -62,3 +62,36 @@
     background: #F9F1E7;
     display: block;
 }
+.cartCheckoutContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+}
+.cartCheckoutContainer h2 {
+    color: #000;
+    font-family: 'Poppins', sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+}
+.cartCheckoutContainer p {
+    color: #000;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+.cartCheckoutContainer p span {
+    color: var(--Primary, #B88E2F);
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+}
+.cartCheckoutContainer button {
+    color: #000;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    border-radius: 15px;
+    border: 1px solid #000;
+    padding: 0.9em 3.7em;
+}

@@ -1,0 +1,6 @@
+.checkoutContainer {
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 2.5em 6.25em;
+}

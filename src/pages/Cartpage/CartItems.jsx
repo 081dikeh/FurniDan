@@ -3,6 +3,14 @@ import RemoveFromCart from '../../components/removeFromCartBtn'
 import CheckoutBtn from '../../components/CheckoutBtn'
 
 export default function CartItems({ cartItems, updateCartItemQuantity, removeFromCart }) {
+    const calculateTotal = () => {
+        let total = 0;
+        cartItems.forEach(item => {
+            total += item.price * item.quantity;
+        });
+        return total;
+    };
+    const total = `Rp ${calculateTotal().toLocaleString('de-DE')}`;
     return ( 
 
         <div className={styles.cartItemContainer}>
@@ -43,8 +51,7 @@ export default function CartItems({ cartItems, updateCartItemQuantity, removeFro
                 <div className={styles.cartCheckoutContainer}>
                     <h2>Cart Totals</h2>
                     <div className={styles.cartTotal}>
-                        <p>Subtotal <span> </span></p>
-                        <p>Total <span> </span></p>
+                        <p>Total <span>{total}</span></p>
                     </div>
                     <CheckoutBtn title={"Checkout"}/>
                 </div>

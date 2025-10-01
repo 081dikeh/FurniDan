@@ -10,6 +10,7 @@ import Contact from "./pages/Contactpage/Contact";
 import SingleProduct from "./pages/Singleproduct/SingleProduct";
 import SideBarCart from "./pages/Cartpage/SideBarCart";
 import CartPage from "./pages/Cartpage/CartPage";
+import Checkout from "./pages/Checkoutpage/Checkout";
 
 function App() {
   const [isTrue, setIsTrue] = useState(false);
@@ -23,6 +24,7 @@ function App() {
   const isadded = false
 
   const addToCart = (product, quantity = 0) => {
+
   quantity = quantity + cartCount; // Use the local state for quantity 
   setCartCount(1); // Reset local state after adding to cart
   setCartItems(prevCartItems => {
@@ -107,6 +109,7 @@ const updateCartItemQuantity = (productId, newQuantity) => {
             />
           } 
         />
+        <Route path="/checkout" element={<Checkout cartItems={cartItems}/>} />
       </Routes>
 
       {isTrue ? (
@@ -119,6 +122,8 @@ const updateCartItemQuantity = (productId, newQuantity) => {
           removeFromCart={removeFromCart}
         />
       ) : ("")}
+
+      
       <Footer />
     </div>
   );

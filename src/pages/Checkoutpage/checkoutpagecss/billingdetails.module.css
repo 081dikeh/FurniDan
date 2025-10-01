@@ -1,0 +1,54 @@
+.billingDetailsContainer {
+    flex-basis: 50%;
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    padding: 35px 75px 75px;
+    gap: 36px;
+}
+.form h1{
+    color: #000;
+    font-family: 'Roboto', sans-serif;
+    font-size: 36px;
+    font-weight: 600;
+}
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+}
+.formGroup label{
+    color: #000;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+}
+.formGroup input{
+    color: #000;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 20px 26px;
+    border-radius: 10px;
+    border: 1px solid #9F9F9F;
+    background: #FFF;
+    margin: 0;
+}
+
+#nameGroup {
+    flex-direction: row;
+    display: flex;
+}
+#nameGroup div{
+    flex-direction: column;
+    display: flex;
+    width: 100%;
+    gap: 16px;
+}
+#nameGroup div input{
+    width: 100%;
+}
