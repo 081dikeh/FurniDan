@@ -12,6 +12,7 @@ import SideBarCart from "./pages/Cartpage/SideBarCart";
 import CartPage from "./pages/Cartpage/CartPage";
 import Checkout from "./pages/Checkoutpage/Checkout";
 import LikedProducts from "./pages/Likedproductspage/LikedProducts";
+import Blog from "./pages/Blogpage/BlogPage";
 
 function App() {
   const [isTrue, setIsTrue] = useState(false);
@@ -141,6 +142,7 @@ const updateCartItemQuantity = (productId, newQuantity) => {
               toggleLike={toggleLike}
               addToCart={addToCart} 
               isProductLiked={isProductLiked} />}  />
+        <Route path="/blog" element={<Blog />} />
       </Routes>
 
       {isTrue ? (

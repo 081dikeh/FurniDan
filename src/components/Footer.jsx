@@ -19,6 +19,7 @@ export default function Footer() {
             <li className={styles.links}><a href="">Shop</a></li>
             <li className={styles.links}><a href="">About</a></li>
             <li className={styles.links}><Link to="/contact">Contact</Link></li>
+            <li className={styles.links}><Link to="/blog">Blog</Link></li>
           </ul>
 
           <ul>
