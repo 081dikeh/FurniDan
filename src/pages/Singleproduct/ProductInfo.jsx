@@ -20,8 +20,8 @@ export default function ProductInfo() {
             </div>
 
             <div className={styles.productinfoTextImg}>
-                <img src={infoImg1} alt="infoimg1" />
-                <img src={infoImg2} alt="infoimg2" />
+                <div><img src={infoImg1} alt="infoimg1" /></div>
+                <div><img src={infoImg2} alt="infoimg2" /></div>                              
             </div>
         </div>
     )

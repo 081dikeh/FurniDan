@@ -1,6 +1,7 @@
 .billingDetailsContainer {
     flex-basis: 50%;
 }
+
 .form {
     display: flex;
     flex-direction: column;
@@ -8,26 +9,30 @@
     padding: 35px 75px 75px;
     gap: 36px;
 }
-.form h1{
+
+.form h1 {
     color: #000;
     font-family: 'Roboto', sans-serif;
     font-size: 36px;
     font-weight: 600;
 }
+
 .formGroup {
     display: flex;
     flex-direction: column;
     gap: 16px;
     width: 100%;
 }
-.formGroup label{
+
+.formGroup label {
     color: #000;
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     font-weight: 600;
     margin: 0;
 }
-.formGroup input{
+
+.formGroup input {
     color: #000;
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
@@ -37,18 +42,109 @@
     border: 1px solid #9F9F9F;
     background: #FFF;
     margin: 0;
+    box-sizing: border-box;
 }
 
 #nameGroup {
     flex-direction: row;
     display: flex;
+    gap: 20px;
 }
-#nameGroup div{
+
+#nameGroup div {
     flex-direction: column;
     display: flex;
     width: 100%;
     gap: 16px;
 }
-#nameGroup div input{
+
+#nameGroup div input {
     width: 100%;
+}
+
+/* ==========================================================================
+   Responsive Styles
+   ========================================================================== */
+
+/* Tablet and below (768px) */
+@media (max-width: 768px) {
+    .billingDetailsContainer {
+        flex-basis: 100%;
+    }
+
+    .form {
+        padding: 30px 40px 50px;
+        gap: 28px;
+        max-width: 100%;
+    }
+
+    .form h1 {
+        font-size: 28px;
+    }
+
+    .formGroup label {
+        font-size: 15px;
+    }
+
+    .formGroup input {
+        padding: 16px 20px;
+        font-size: 15px;
+    }
+
+    /* Stack name fields on smaller tablets if needed */
+    #nameGroup {
+        gap: 16px;
+    }
+}
+
+/* Mobile (480px) */
+@media (max-width: 480px) {
+    .form {
+        padding: 20px 20px 40px;
+        gap: 24px;
+    }
+
+    .form h1 {
+        font-size: 24px;
+    }
+
+    .formGroup {
+        gap: 12px;
+    }
+
+    .formGroup label {
+        font-size: 14px;
+    }
+
+    .formGroup input {
+        padding: 14px 16px;
+        font-size: 14px;
+    }
+
+    /* Stack First Name and Last Name vertically on mobile */
+    #nameGroup {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    #nameGroup div {
+        gap: 12px;
+    }
+}
+
+/* Extra small mobile (360px) */
+@media (max-width: 360px) {
+    .form {
+        padding: 15px 15px 30px;
+        gap: 20px;
+    }
+
+    .form h1 {
+        font-size: 22px;
+    }
+
+    .formGroup input {
+        padding: 12px 14px;
+        font-size: 13px;
+    }
 }
