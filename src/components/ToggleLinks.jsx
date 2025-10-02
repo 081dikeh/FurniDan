@@ -11,7 +11,7 @@ export default function ToggleLinks({ isOpen, heartIcon, userIcon }) {
                 <li><Link to="/contact">Contact</Link></li>
             </ul>
             <div className={styles.menuBtnLinks}>
-                <button><img src={heartIcon} alt="" /></button>
+                <button> <Link to="/likedproducts"><img src={heartIcon} alt="" /></Link></button>
                 <button><img src={userIcon} alt="" /></button>
             </div>
         </div> : ''
