@@ -7,19 +7,38 @@
     color: #262626;
     text-align: center;
     margin-bottom: 1em;
+    font-family: poppins, sans-serif;
 }
-/* .showMoreContainer {
-    width: 100%;
-    display: grid;
-    place-items: center;
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .ourProductSection {
+        padding: 2.5em 2em;
+    }
+    
+    .productHeader {
+        font-size: 36px;
+    }
 }
-.showMoreButton {
-    background: none;
-    border: 2px solid #B88E2F;
-    color: #B88E2F;
-    padding: 1em 3.5em;
-    font-size: 16px;
-    font-weight: semibold;
-    cursor: pointer;
-    outline: none;
-} */
+
+@media (max-width: 768px) {
+    .ourProductSection {
+        padding: 2em 1.5em;
+    }
+    
+    .productHeader {
+        font-size: 32px;
+        margin-bottom: 0.8em;
+    }
+}
+
+@media (max-width: 480px) {
+    .ourProductSection {
+        padding: 1.5em 1em;
+    }
+    
+    .productHeader {
+        font-size: 28px;
+        margin-bottom: 0.7em;
+    }
+}

@@ -1,12 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-
 .nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 2em 3em;
-/*     position: relative; */
     box-shadow: 0 8px 16px -4px rgba(0,0,0,0.15);
     width: 100%;
     box-sizing: border-box;
@@ -20,8 +18,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    text-decoration: none;
 }
-
+.logo a img {
+    height: 35px;
+    width: auto;
+}
 .logo a span{
     font-size: 34px;
     font-weight: bold;
@@ -31,22 +33,36 @@
 .navLinks, .navIcons {
     display: flex;
     gap: 2em;
+    align-items: center;
 }
-
+.navLinks {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
 .navLinks li a {
     color: #000;
     font-size: 16px;
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
-
+.navLinks li a:hover {
+    color: #B88E2F;
+}
 .navIcons button {
     background: none;
     border: none;
     cursor: pointer;
+    transition: transform 0.2s ease;
+}
+.navIcons button:hover {
+    transform: scale(1.1);
 }
 .navIcons button img{
     max-width: 24px;
+    display: block;
 }
 .menuBtnContainer{
     z-index: 100;
@@ -55,42 +71,118 @@
 .menuBtn {
     background: none;
     border: none;
+    cursor: pointer;
 }
 .menuBtn img {
     width: 24px;
     height: 24px;
 }
 
-@media screen and (max-width: 900px) {
+/* Responsive Design */
+@media (max-width: 1024px) {
     .nav {
-        gap: 3em;
+        padding: 1.5em 2.5em;
+    }
+    
+    .logo a span {
+        font-size: 30px;
+    }
+    
+    .navLinks, .navIcons {
+        gap: 1.5em;
+    }
+    
+    .navLinks li a {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 900px) {
+    .nav {
+        gap: 1.5em;
         padding: 1em 1.5em;
     }
+    
     .logo {
         margin-right: auto;
     }
+    
     .logo a img{
         max-height: 30px;
         width: auto;
     }
+    
     .logo a span{
         font-size: 24px;
     }
+    
     .navLinks {
         display: none;
     }
+    
     .navLinks, .navIcons {
         gap: 1em;
     }
+    
+    .navIcons button img {
+        max-width: 22px;
+    }
+    
     .menuBtnContainer {
         display: block;
     }
-    
 }
-@media screen and (max-width: 500px) {
+
+@media (max-width: 768px) {
+    .nav {
+        padding: 1em 1.2em;
+    }
+    
+    .logo a span {
+        font-size: 22px;
+    }
+    
+    .navIcons {
+        gap: 0.8em;
+    }
+    
+    .navIcons button img {
+        max-width: 20px;
+    }
+    
+    .menuBtn img {
+        width: 22px;
+        height: 22px;
+    }
+}
+
+@media (max-width: 500px) {
+    .nav {
+        padding: 0.8em 1em;
+    }
+    
+    .logo a img {
+        max-height: 25px;
+    }
+    
+    .logo a span {
+        font-size: 20px;
+    }
+    
+    .navIcons {
+        gap: 0.6em;
+    }
+    
+    .navIcons button img {
+        max-width: 18px;
+    }
+    
+    .menuBtn img {
+        width: 20px;
+        height: 20px;
+    }
+    
     .disNone {
         display: none;
     }
 }
-
-

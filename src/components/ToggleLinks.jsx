@@ -1,13 +1,14 @@
 import styles from './componentcss/togglelinks.module.css'
+import { Link } from 'react-router-dom'
 export default function ToggleLinks({ isOpen, heartIcon, userIcon }) {
     return (
 
         isOpen ? <div className={styles.toggleLinkDiv}>            
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#shop">Shop</a></li>
+                <li><Link to="/">Home</Link></li>
+                <li><Link to="/shop">Shop</Link></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><Link to="/contact">Contact</Link></li>
             </ul>
             <div className={styles.menuBtnLinks}>
                 <button><img src={heartIcon} alt="" /></button>

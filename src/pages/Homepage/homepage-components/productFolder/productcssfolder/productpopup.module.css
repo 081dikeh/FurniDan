@@ -13,12 +13,14 @@
     gap: 2em;
     padding: 1.5em;
     cursor: pointer;
+    transition: opacity 0.3s ease;
 }
 .popUpBtnsContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1em;
+    width: 100%;
 }
 .addToCartButton, .detailsButton, .popUpBtnsContainer button {
     background: #fff;
@@ -26,16 +28,23 @@
     color: #B88E2F;
     padding: 1em 3.5em;
     font-size: 16px;
-    font-weight: semibold;
+    font-weight: 600;
     cursor: pointer;
     outline: none;
-
+    transition: background 0.3s ease, transform 0.2s ease;
+    width: 100%;
+    max-width: 250px;
+}
+.addToCartButton:hover, .detailsButton:hover, .popUpBtnsContainer button:hover {
+    background: #f5f5f5;
+    transform: translateY(-2px);
 }
 .popupLinksContainer {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    max-width: 250px;
 }
 .popupLinksContainer button {
     background: none;
@@ -47,9 +56,79 @@
     align-items: center;
     gap: 0.2em;
     font-family: poppins, sans-serif;
-    font-weight: semibold;
+    font-weight: 600;
+    transition: opacity 0.3s ease;
+}
+.popupLinksContainer button:hover {
+    opacity: 0.7;
 }
 .popupLinksContainer button img{
     height: 16px;
     width: 16px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .productPopup {
+        gap: 1.5em;
+        padding: 1em;
+    }
+    
+    .popUpBtnsContainer {
+        gap: 0.8em;
+    }
+    
+    .addToCartButton, .detailsButton, .popUpBtnsContainer button {
+        padding: 0.9em 2.5em;
+        font-size: 14px;
+        max-width: 220px;
+    }
+    
+    .popupLinksContainer {
+        max-width: 220px;
+    }
+    
+    .popupLinksContainer button {
+        font-size: 14px;
+        gap: 0.3em;
+    }
+    
+    .popupLinksContainer button img {
+        height: 14px;
+        width: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .productPopup {
+        gap: 1.2em;
+        padding: 0.8em;
+    }
+    
+    .popUpBtnsContainer {
+        gap: 0.7em;
+    }
+    
+    .addToCartButton, .detailsButton, .popUpBtnsContainer button {
+        padding: 0.8em 2em;
+        font-size: 13px;
+        max-width: 180px;
+    }
+    
+    .popupLinksContainer {
+        flex-direction: column;
+        gap: 0.8em;
+        max-width: 180px;
+    }
+    
+    .popupLinksContainer button {
+        font-size: 13px;
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .popupLinksContainer button img {
+        height: 13px;
+        width: 13px;
+    }
 }

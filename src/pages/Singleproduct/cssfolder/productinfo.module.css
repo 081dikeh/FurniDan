@@ -1,4 +1,4 @@
-.productInfoContainer {
+/* .productInfoContainer {
     margin-top: 4.187em;
     padding: 0 6.2em 4.1em;
 
@@ -31,4 +31,109 @@
     justify-content: space-between;
     gap: 2em;
     margin-top: 3.75em;
+} */
+
+/* ==========================================================================
+   Original Styles (Desktop-First)
+   ========================================================================== */
+
+.productInfoContainer {
+    margin-top: 4.187em;
+    padding: 0 6.2em 4.1em;
+}
+
+.productInfohead {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3.25em;
+    margin-bottom: 2.3em;
+}
+
+.productInfohead h3 {
+    color: #9F9F9F;
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.productinfoText {
+    padding: 0 7em;
+}
+
+.productinfoText p {
+    color: #9F9F9F;
+    text-align: justify;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+}
+
+.productinfoTextImg {
+    display: flex;
+    justify-content: space-between;
+    gap: 2em;
+    margin-top: 3.75em;
+}
+
+/* ==========================================================================
+   NEW: Responsive Styles
+   ========================================================================== */
+
+/* 
+  Make images flexible by default.
+  This prevents them from overflowing their container.
+*/
+.productinfoTextImg img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Removes bottom space under the image */
+}
+
+/* 
+  Media Query for Tablets and smaller devices.
+  Applies when the screen width is 768px or less.
+*/
+@media (max-width: 768px) {
+
+    /* 1. Reduce horizontal padding to prevent overflow */
+    .productInfoContainer {
+        padding: 0 2em 4.1em; /* Reduced from 6.2em */
+    }
+
+    .productinfoText {
+        padding: 0; /* Remove extra padding, container handles it */
+    }
+
+    /* 2. Allow headers to wrap onto the next line if needed */
+    .productInfohead {
+        flex-wrap: wrap; /* Allows items to wrap */
+        gap: 1.5em; /* Reduced gap for tighter layout */
+    }
+    
+    .productInfohead h3 {
+        font-size: 1.125rem; /* 18px, slightly smaller for mobile */
+    }
+
+    /* 3. Stack the images vertically */
+    .productinfoTextImg {
+        flex-direction: column; /* Stacks images on top of each other */
+        align-items: center; /* Centers the images in the column */
+        gap: 1.5em; /* Adjust vertical gap between stacked images */
+    }
+}
+
+/* 
+  Media Query for small mobile phones.
+  Applies when the screen width is 480px or less.
+*/
+@media (max-width: 480px) {
+
+    /* 4. Further reduce padding and font size for very small screens */
+    .productInfoContainer {
+        padding: 0 1em 4.1em; /* Even less padding on small phones */
+    }
+
+    .productInfohead h3 {
+        font-size: 1rem; /* 16px */
+    }
 }

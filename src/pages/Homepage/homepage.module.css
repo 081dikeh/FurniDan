@@ -1,6 +1,6 @@
 .hero {
     background-image: url('/assets/hero-img.png');
-    height: 100vh; /* or any value */
+    height: 100vh;
     background-size: cover;
     background-position: center;
     display: flex;
@@ -21,14 +21,14 @@
 }
 .discover span {
     font-size: 16px;
-    font-weight: semi-bold;
+    font-weight: 600;
 }
 .discover h1 {
     font-size: 52px;
     font-weight: bold;
     color: #B88E2F;
     font-family: 'Montserrat', sans-serif;
-/*     color: #d5ab49; */
+    line-height: 1.2;
 }
 .discover p {
     font-size: 18px;
@@ -46,38 +46,138 @@
     cursor: pointer;
     font-size: 16px;
     font-weight: bold;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+.buyNowBtn button:hover {
+    background-color: #9a7326;
+    transform: translateY(-2px);
 }
 
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .hero {
+        padding: 3rem;
+    }
+    
+    .discover {
+        max-width: 550px;
+        gap: 1.5rem;
+    }
+    
+    .discover h1 {
+        font-size: 46px;
+    }
+    
+    .discover p {
+        font-size: 17px;
+        line-height: 22px;
+    }
+    
+    .buyNowBtn button {
+        padding: 18px 35px;
+        font-size: 15px;
+    }
+}
 
-@media screen and (max-width: 900px) {
+@media (max-width: 900px) {
     .hero {
         justify-content: center;
-        align-items:first baseline;
-    } 
+        align-items: flex-start;
+        padding: 2rem;
+    }
+    
     .discover {
         padding: 3%;
         margin-top: 10%;
-    }
-    .discover h1 {
-        font-size: clamp(35px, 3.5vw, 52px);
-    }
-    .discover p {
-        font-size: clamp(16px, 2vw, 18px);
-    }
-    .discover h1 {
-        font-size: clamp(35px, 3.5vw, 52px);
+        max-width: 90%;
     }
     
-}
-@media screen and (max-width: 500px) {
-    .hero {
-        padding: 4rem 2rem 0;
+    .discover h1 {
+        font-size: 40px;
     }
+    
+    .discover p {
+        font-size: 16px;
+        line-height: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        height: auto;
+        min-height: 100vh;
+        padding: 2rem 1.5rem;
+    }
+    
+    .discover {
+        gap: 1.3rem;
+    }
+    
+    .discover h1 {
+        font-size: 36px;
+    }
+    
+    .discover span {
+        font-size: 14px;
+    }
+    
+    .discover p {
+        font-size: 15px;
+        line-height: 20px;
+    }
+    
+    .buyNowBtn button {
+        padding: 16px 30px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 500px) {
+    .hero {
+        padding: 2rem 1rem;
+        background-position: 30% center;
+    }
+    
     .discover {
         min-width: 90%;
-    }
-    .buyNowBtn button {
-        width: 100%;
+        max-width: 100%;
+        padding: 6%;
+        gap: 1.2rem;
+        margin-top: 15%;
     }
     
+    .discover h1 {
+        font-size: 32px;
+    }
+    
+    .discover span {
+        font-size: 13px;
+    }
+    
+    .discover p {
+        font-size: 14px;
+        line-height: 19px;
+    }
+    
+    .buyNowBtn button {
+        width: 100%;
+        padding: 15px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 375px) {
+    .discover h1 {
+        font-size: 28px;
+    }
+    
+    .discover p {
+        font-size: 13px;
+        line-height: 18px;
+    }
+    
+    .buyNowBtn button {
+        padding: 14px;
+        font-size: 12px;
+    }
 }

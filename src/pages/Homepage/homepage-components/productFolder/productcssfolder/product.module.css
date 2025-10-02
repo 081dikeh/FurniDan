@@ -1,15 +1,26 @@
 .productContainer {
    cursor: pointer;
    position: relative;
+   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.productContainer:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 .imgDescription {
     position: relative;
     width: 100%;
-    z-index: -10;
+    z-index: 1;
+    overflow: hidden;
 }
 .imgDescription img{
     display: block;
     width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+.productContainer:hover .imgDescription img {
+    transform: scale(1.05);
 }
 .discountTagContainer, .newTagContainer {
     position: absolute;
@@ -20,10 +31,12 @@
     height: 48px;
     display: grid;
     place-items: center;
+    z-index: 2;
 }
 .discountTag, .newTag {
     color: white;
     font-size: 16px;
+    font-weight: 600;
 }
 .discountTagContainer {
     background-color: #E97171;
@@ -37,29 +50,137 @@
     display: flex;
     flex-direction: column;
     gap: 0.8em;
-    background-color: #edebebe4;
+    background-color: #F4F5F7;
     position: relative;
-    z-index: -15;
 }
 .textDescription h2 {
     font-size: 24px;
-    color: #1d0707;
-    font-weight: semibold;
+    color: #3A3A3A;
+    font-weight: 600;
 }
 .textDescription p{
     font-size: 16px;
-    color: #595959;
+    color: #898989;
 }
 .textDescription .price {
     font-size: 20px;
-    color: #1d0707;
-    font-weight: semibold;
+    color: #3A3A3A;
+    font-weight: 600;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 .textDescription .price span {
     font-size: 16px;
-    color: #989898;
+    color: #B0B0B0;
     text-decoration: line-through;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .textDescription h2 {
+        font-size: 22px;
+    }
+    
+    .textDescription p {
+        font-size: 15px;
+    }
+    
+    .textDescription .price {
+        font-size: 18px;
+    }
+    
+    .textDescription .price span {
+        font-size: 15px;
+    }
+    
+    .discountTagContainer, .newTagContainer {
+        width: 44px;
+        height: 44px;
+        top: 8px;
+        right: 8px;
+    }
+    
+    .discountTag, .newTag {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .productContainer:hover {
+        transform: translateY(-3px);
+    }
+    
+    .textDescription {
+        padding: 0.9em 0.9em 1.3em;
+        gap: 0.7em;
+    }
+    
+    .textDescription h2 {
+        font-size: 20px;
+    }
+    
+    .textDescription p {
+        font-size: 14px;
+    }
+    
+    .textDescription .price {
+        font-size: 17px;
+    }
+    
+    .textDescription .price span {
+        font-size: 14px;
+    }
+    
+    .discountTagContainer, .newTagContainer {
+        width: 40px;
+        height: 40px;
+        top: 6px;
+        right: 6px;
+    }
+    
+    .discountTag, .newTag {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    .productContainer:hover {
+        transform: translateY(-2px);
+    }
+    
+    .textDescription {
+        padding: 0.8em;
+        gap: 0.6em;
+    }
+    
+    .textDescription h2 {
+        font-size: 18px;
+    }
+    
+    .textDescription p {
+        font-size: 13px;
+    }
+    
+    .textDescription .price {
+        font-size: 16px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.3em;
+    }
+    
+    .textDescription .price span {
+        font-size: 13px;
+    }
+    
+    .discountTagContainer, .newTagContainer {
+        width: 36px;
+        height: 36px;
+        top: 5px;
+        right: 5px;
+    }
+    
+    .discountTag, .newTag {
+        font-size: 12px;
+    }
 }

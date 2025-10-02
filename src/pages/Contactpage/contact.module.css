@@ -19,13 +19,13 @@
     color: #9F9F9F;
     font-family: poppins, sans-serif;
     font-size: 16px;
+    line-height: 1.5;
 }
 
 .contactInfo {
     padding: 0 12em;
     display: flex;
     gap: 1.8em;
-
 }
 
 .contactTextInfo {
@@ -46,14 +46,150 @@
     color: #000;
     font-family: poppins, sans-serif;
     font-size: 24px;
-
+    margin-bottom: 0.5em;
 }
 .info .text p{
     color: #000;
     font-family: poppins, sans-serif;
     font-size: 16px;
+    line-height: 1.5;
 }
 
 .contactInputInfo {
     width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .contactInfo {
+        padding: 0 6em;
+    }
+    
+    .info {
+        padding: 0 2em;
+    }
+}
+
+@media (max-width: 1024px) {
+    .contactHead {
+        padding-top: 4em;
+        padding-bottom: 4em;
+    }
+    
+    .contactHead h2 {
+        font-size: 32px;
+    }
+    
+    .contactHead p {
+        font-size: 15px;
+        padding: 0 2em;
+    }
+    
+    .contactInfo {
+        padding: 0 3em;
+        gap: 2em;
+    }
+    
+    .info {
+        padding: 0 1.5em;
+        gap: 1.5em;
+    }
+    
+    .info .text h3 {
+        font-size: 22px;
+    }
+    
+    .info .text p {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .contactHead {
+        padding-top: 3em;
+        padding-bottom: 3em;
+    }
+    
+    .contactHead h2 {
+        font-size: 28px;
+    }
+    
+    .contactHead p {
+        font-size: 14px;
+        padding: 0 1.5em;
+    }
+    
+    .contactInfo {
+        flex-direction: column;
+        padding: 0 2em;
+        gap: 3em;
+    }
+    
+    .contactTextInfo {
+        gap: 2em;
+    }
+    
+    .info {
+        padding: 0;
+        gap: 1.5em;
+    }
+    
+    .info .img img {
+        width: 20px;
+    }
+    
+    .info .text h3 {
+        font-size: 20px;
+    }
+    
+    .info .text p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contactHead {
+        padding-top: 2em;
+        padding-bottom: 2em;
+        gap: 10px;
+    }
+    
+    .contactHead h2 {
+        font-size: 24px;
+        padding: 0 1em;
+    }
+    
+    .contactHead p {
+        font-size: 13px;
+        padding: 0 1em;
+    }
+    
+    .contactInfo {
+        padding: 0 1em;
+        gap: 2.5em;
+    }
+    
+    .contactTextInfo {
+        gap: 1.5em;
+    }
+    
+    .info {
+        flex-direction: column;
+        gap: 1em;
+        text-align: center;
+        align-items: center;
+    }
+    
+    .info .img img {
+        width: 24px;
+    }
+    
+    .info .text h3 {
+        font-size: 18px;
+        margin-bottom: 0.3em;
+    }
+    
+    .info .text p {
+        font-size: 13px;
+    }
 }

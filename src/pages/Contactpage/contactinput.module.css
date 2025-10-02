@@ -1,7 +1,6 @@
 .contactInputInfo {
     padding: 0 3.12em;
     width: 100%;
-
 }
 .contactInputInfo form{
     display: flex;
@@ -29,6 +28,14 @@
     border-radius: 10px;
     border: 2px solid #9F9F9F;
     background: #FFF;
+    transition: border-color 0.3s ease;
+}
+.inputContainer input:focus, .inputContainer textarea:focus {
+    border-color: #B88E2F;
+}
+.inputContainer textarea {
+    min-height: 120px;
+    resize: vertical;
 }
 .inputContainer input[type="email"] {
     margin-right: 0;
@@ -44,4 +51,81 @@
     font-size: 16px;
     padding: 0.87em 5.56em;
     cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+.contactBtn:hover {
+    background: #9a7326;
+    transform: translateY(-2px);
+}
+.contactBtn:active {
+    transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .contactInputInfo {
+        padding: 0 2em;
+    }
+    
+    .contactInputInfo form {
+        gap: 2em;
+    }
+}
+
+@media (max-width: 768px) {
+    .contactInputInfo {
+        padding: 0 1.5em;
+    }
+    
+    .contactInputInfo form {
+        gap: 1.75em;
+    }
+    
+    .inputContainer {
+        gap: 1em;
+    }
+    
+    .inputContainer input, .inputContainer textarea {
+        padding: 1.2em 1.5em;
+        font-size: 15px;
+    }
+    
+    .contactBtn {
+        padding: 0.87em 4em;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contactInputInfo {
+        padding: 0 1em;
+    }
+    
+    .contactInputInfo form {
+        gap: 1.5em;
+    }
+    
+    .inputContainer {
+        gap: 0.75em;
+    }
+    
+    .inputContainer label {
+        font-size: 14px;
+    }
+    
+    .inputContainer input, .inputContainer textarea {
+        padding: 1em 1.2em;
+        font-size: 14px;
+    }
+    
+    .inputContainer textarea {
+        min-height: 100px;
+    }
+    
+    .contactBtn {
+        width: 100%;
+        padding: 1em;
+        font-size: 14px;
+        margin: 0;
+    }
 }

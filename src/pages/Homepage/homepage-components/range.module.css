@@ -8,19 +8,22 @@
 .rangeTextContent {
     text-align: center;
     max-width: 100%;
+    margin-bottom: 1em;
 }
 .rangeTextContent h3{
     font-size: 32px;
     font-weight: bold;
     color: #262626;
+    margin-bottom: 0.5em;
 }
 .rangeTextContent p{
     font-size: 20px;
     color: #505050;
+    line-height: 1.5;
 }
 .rangeImages{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     width: 80%;
     gap: 2em;
     padding: 2em 1em 0;
@@ -31,46 +34,100 @@
     flex-direction: column;
     text-align: center;
     gap: 1em;
+    transition: transform 0.3s ease;
+}
+.rangeImage:hover {
+    transform: translateY(-10px);
 }
 .rangeImage img{
     width: 100%;
     height: auto;
     display: block;
+    border-radius: 8px;
+    object-fit: cover;
 }
 .rangeImage span{
     font-size: 24px;
-    font-weight: semi-bold;
+    font-weight: 600;
     color: #262626;
 }
 
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .range {
+        padding: 2.5em;
+    }
+    
+    .rangeImages {
+        width: 90%;
+        gap: 1.5em;
+    }
+    
+    .rangeTextContent h3 {
+        font-size: 28px;
+    }
+    
+    .rangeTextContent p {
+        font-size: 18px;
+    }
+    
+    .rangeImage span {
+        font-size: 22px;
+    }
+}
 
-@media screen and (max-width: 900px) {
-    .rangeTextContent h3{
-        font-size: clamp(24px, 3vw, 32px);
-    }
-    .rangeTextContent p{
-        font-size: clamp(16px, 2.5vw, 20px);
-    }
-    .rangeImages{
-        grid-template-columns: 1fr;
-    }
-    .rangeImage img{
-        aspect-ratio: 5/3;
-    }
-    .rangeImage span{
-        font-size: clamp(20px, 2vw, 24px);
-    }
-
-} 
-@media screen and (max-width: 500px) {
+@media (max-width: 768px) {
     .range {
         padding: 2em;
-    }    
-    .rangeImages{
-        width: 100%;
     }
-    .rangeImage img{
-        aspect-ratio: 2/2.5;
+    
+    .rangeTextContent h3 {
+        font-size: 26px;
     }
+    
+    .rangeTextContent p {
+        font-size: 16px;
+        padding: 0 1em;
+    }
+    
+    .rangeImages {
+        grid-template-columns: repeat(2, 1fr);
+        width: 95%;
+        gap: 1.5em;
+        padding: 1.5em 0.5em 0;
+    }
+    
+    .rangeImage span {
+        font-size: 20px;
+    }
+}
 
-} 
+@media (max-width: 480px) {
+    .range {
+        padding: 1.5em 1em;
+    }
+    
+    .rangeTextContent h3 {
+        font-size: 24px;
+    }
+    
+    .rangeTextContent p {
+        font-size: 14px;
+        padding: 0 0.5em;
+    }
+    
+    .rangeImages {
+        grid-template-columns: 1fr;
+        width: 100%;
+        gap: 2em;
+        padding: 1.5em 0 0;
+    }
+    
+    .rangeImage img {
+        aspect-ratio: 4/3;
+    }
+    
+    .rangeImage span {
+        font-size: 20px;
+    }
+}

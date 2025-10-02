@@ -1,11 +1,12 @@
 import SubHeroImg from "../../components/SubHeroImg";
 import Guarantees from "../../components/Guarantees";
 import CartItems from "./CartItems";
+import styles from './cartpagecss/cartpage.module.css';
 
 export default function CartPage({ cartItems, updateCartItemQuantity, removeFromCart }) {
 
   return (
-    <div>
+    <div className={styles.cartPage}>
       <SubHeroImg pageName={"Cart"} />
       <div className="cartItems">
         

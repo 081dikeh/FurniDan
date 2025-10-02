@@ -30,3 +30,67 @@
     font-size: 20px;
     font-weight: 500;
 }
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .guarantee {
+        padding: 4em 2em;
+        gap: 20px;
+    }
+    
+    .text h3 {
+        font-size: 22px;
+    }
+    
+    .text span {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    .guarantee {
+        flex-wrap: wrap;
+        padding: 3em 1.5em;
+        gap: 30px;
+    }
+    
+    .guarantee .guaranteeContent {
+        flex: 1 1 45%;
+        min-width: 250px;
+    }
+    
+    .text h3 {
+        font-size: 20px;
+    }
+    
+    .text span {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .guarantee {
+        flex-direction: column;
+        padding: 2em 1em;
+        gap: 25px;
+        margin-top: 3em;
+    }
+    
+    .guarantee .guaranteeContent {
+        flex: 1 1 100%;
+        justify-content: center;
+    }
+    
+    .guarantee .guaranteeContent img {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .text h3 {
+        font-size: 18px;
+    }
+    
+    .text span {
+        font-size: 14px;
+    }
+}

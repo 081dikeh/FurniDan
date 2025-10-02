@@ -6,7 +6,18 @@
     left: 0;
     z-index: 99;
     background: rgba(137, 137, 137, 0.5);
+    animation: fadeIn 0.3s ease;
 }
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 .sidebarcartContainer {
     position: fixed;
     width: 500px;
@@ -17,6 +28,18 @@
     right: 0;
     z-index: 100;
     padding: 1.5em;
+    animation: slideIn 0.3s ease-out;
+    display: flex;
+    flex-direction: column;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
 }
 
 .sidebarHead {
@@ -24,15 +47,30 @@
     justify-content: space-between;
     align-items: center;
     padding-bottom: 1.5em;
+    border-bottom: 1px solid #D9D9D9;
 }
+
 .sidebarHead h2{
     color: #000;
     font-family: 'Poppins', sans-serif;
     font-size: 24px;
     font-weight: 600;
 }
+
 .sidebarHead img{
     width: 24px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.sidebarHead img:hover {
+    transform: scale(1.1);
+}
+
+.cartDisplayconatainer {
+    flex: 1;
+    overflow-y: auto;
+    padding: 1.5em 0;
 }
 
 .lowerBtns {
@@ -41,13 +79,18 @@
     left: 0;
     width: 100%;
     padding: 0 1.5em;
+    border-top: 1px solid #D9D9D9;
+    padding-top: 1.5em;
 }
+
 .lowerBtns .lowerBtnContainer {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    gap: 0.5em;
 }
+
 .lowerBtns .lowerBtnContainer button{
     color: #000;
     font-family: 'Poppins', sans-serif;
@@ -56,26 +99,37 @@
     padding: 6px 30px;
     border-radius: 50px;
     border: 1px solid #000;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
+.lowerBtns .lowerBtnContainer button:hover {
+    background: #000;
+    color: #fff;
+}
 
-/* cart==================-------- */
+/* cart */
 .cartDisplay {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
+
 .cartItem {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 10px;
 }
+
 .sideBarcartImg {
     width: 105px;
     height: 105px;
     border-radius: 10px;
     object-fit: cover;
+    flex-shrink: 0;
 }
+
 .sideBarcartdetails {
     color: #000;
     font-family: 'Poppins', sans-serif;
@@ -84,10 +138,119 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+    flex: 1;
 }
+
+.sideBarcartdetails h3 {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.sideBarcartdetails p {
+    margin: 0;
+}
+
 .sideBarcartdetails p span {
     color: #B88E2F;
     font-family: 'Poppins', sans-serif;
     font-size: 12px;
     font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .sidebarcartContainer {
+        max-width: 380px;
+        width: 90%;
+    }
+    
+    .sidebarHead h2 {
+        font-size: 22px;
+    }
+    
+    .sideBarcartImg {
+        width: 90px;
+        height: 90px;
+    }
+    
+    .sideBarcartdetails {
+        font-size: 14px;
+    }
+    
+    .sideBarcartdetails h3 {
+        font-size: 14px;
+    }
+    
+    .lowerBtns .lowerBtnContainer button {
+        font-size: 11px;
+        padding: 5px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebarcartContainer {
+        max-width: 100%;
+        width: 85%;
+        padding: 1.2em;
+    }
+    
+    .sidebarHead {
+        padding-bottom: 1.2em;
+    }
+    
+    .sidebarHead h2 {
+        font-size: 20px;
+    }
+    
+    .sidebarHead img {
+        width: 20px;
+    }
+    
+    .cartDisplayconatainer {
+        padding: 1.2em 0;
+    }
+    
+    .cartDisplay {
+        gap: 15px;
+    }
+    
+    .cartItem {
+        gap: 8px;
+    }
+    
+    .sideBarcartImg {
+        width: 75px;
+        height: 75px;
+    }
+    
+    .sideBarcartdetails {
+        font-size: 13px;
+        gap: 8px;
+    }
+    
+    .sideBarcartdetails h3 {
+        font-size: 13px;
+    }
+    
+    .sideBarcartdetails p span {
+        font-size: 11px;
+    }
+    
+    .lowerBtns {
+        bottom: 1.5em;
+        padding: 0 1.2em;
+        padding-top: 1.2em;
+    }
+    
+    .lowerBtns .lowerBtnContainer {
+        flex-direction: column;
+        gap: 0.8em;
+    }
+    
+    .lowerBtns .lowerBtnContainer button {
+        width: 100%;
+        font-size: 12px;
+        padding: 8px;
+    }
 }

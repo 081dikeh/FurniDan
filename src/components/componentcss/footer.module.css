@@ -39,6 +39,11 @@ footer ul {
 }
 .links a{
     color: #9F9F9F;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.links a:hover {
+    color: #000;
 }
 
 input[type="email"] {
@@ -63,6 +68,10 @@ input[type="email"] {
     text-transform: uppercase;
     font-weight: bold;
     font-size: 14px;
+    transition: transform 0.2s ease;
+}
+.subscribe button:hover {
+    transform: translateY(-2px);
 }
 .copyright {
     padding: 2em 0;
@@ -71,12 +80,112 @@ input[type="email"] {
     font-family: poppins, sans-serif;
 }
 
-@media screen and (max-width: 900px) {
-    .footerContent {
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    }
-    .footerLinks {
-        justify-content: space-between;
+/* Responsive Design */
+@media (max-width: 1024px) {
+    footer {
+        padding: 2em 2em 0;
     }
     
+    .footerContent {
+        gap: 2.5em;
+    }
+    
+    footer ul {
+        gap: 2.5em;
+    }
+}
+
+@media (max-width: 768px) {
+    footer {
+        padding: 2em 1.5em 0;
+    }
+    
+    .footerContent {
+        grid-template-columns: 1fr 1fr;
+        gap: 3em;
+    }
+    
+    .footerLogoSection {
+        grid-column: 1 / -1;
+    }
+    
+    .footerAddress p {
+        margin-top: 1.5em;
+    }
+    
+    footer ul {
+        gap: 2em;
+    }
+    
+    .footerLinks {
+        justify-content: space-between;
+        gap: 2em;
+    }
+}
+
+@media (max-width: 480px) {
+    footer {
+        padding: 1.5em 1em 0;
+    }
+    
+    .footerContent {
+        grid-template-columns: 1fr;
+        gap: 2.5em;
+        padding: 2em 0;
+    }
+    
+    .footerLogoSection {
+        text-align: center;
+    }
+    
+    .footerLogo {
+        font-size: 20px;
+    }
+    
+    .footerAddress p {
+        font-size: 14px;
+        margin-top: 1em;
+    }
+    
+    .footerLinks {
+        flex-direction: column;
+        gap: 2.5em;
+    }
+    
+    footer ul {
+        gap: 1.5em;
+        text-align: center;
+    }
+    
+    .linkHead {
+        font-size: 14px;
+    }
+    
+    .links a {
+        font-size: 14px;
+    }
+    
+    .subscribe {
+        margin-top: 1.5em;
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+    }
+    
+    input[type="email"] {
+        width: 100%;
+        margin-right: 0;
+        font-size: 13px;
+    }
+    
+    .subscribe button {
+        align-self: flex-start;
+        font-size: 13px;
+    }
+    
+    .copyright {
+        padding: 1.5em 0;
+        font-size: 14px;
+        text-align: center;
+    }
 }
