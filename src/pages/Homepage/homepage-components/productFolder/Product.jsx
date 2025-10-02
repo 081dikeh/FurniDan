@@ -2,7 +2,7 @@ import styles from './productcssfolder/product.module.css';
 import ProductPopup from './ProductPopup';
 import { useState } from 'react';
 
-export default function Product({ product, addToCart }) {
+export default function Product({ product, addToCart, toggleLike, isProductLiked }) {
     const productId = product.id; // Assuming product has an id property
     const [hovered, setHovered] = useState(false);
     const isHovered = hovered
@@ -42,7 +42,7 @@ export default function Product({ product, addToCart }) {
                     {product.priceDiscount.isTrue ? <span>{product.priceDiscount.slicedPrice}</span> : ''}
                 </p>
             </div>
-            { isHovered ? <ProductPopup productId={productId} product={product} addToCart={addToCart} /> : ''}
+            { isHovered ? <ProductPopup productId={productId} product={product} addToCart={addToCart} toggleLike={toggleLike} isProductLiked={isProductLiked}/> : ''}
         </div>
     )
 } 

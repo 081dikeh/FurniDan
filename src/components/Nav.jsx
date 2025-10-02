@@ -32,7 +32,7 @@ export default function Nav({ isTrue, setIsTrue }) {
         <div className={styles.navIcons}>
             <button className={styles.disNone}><img src={userIcon} alt="" /></button>
             <button><img src={searchIcon} alt="" /></button>
-            <button className={styles.disNone}><img src={heartIcon} alt="" /></button>
+            <button className={styles.disNone}><Link to="/likedproducts"><img src={heartIcon} alt="" /></Link></button>
             <button onClick={() => setIsTrue(!isTrue)}><img src={cartIcon} alt="" /></button>
         </div>
         <div className={styles.menuBtnContainer}>

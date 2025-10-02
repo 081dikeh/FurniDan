@@ -6,7 +6,7 @@ import Guarantees from '../../components/Guarantees'
 import { useState } from 'react';
 import ProductData from '../.././dataFile/ProductData'
 
-export default function Shop({ productsToShow, cardsToShow, setCardsToShow, addToCart }) {
+export default function Shop({ productsToShow, cardsToShow, setCardsToShow, addToCart, toggleLike, isProductLiked }) {
     //const [cardsToShow, setCardsToShow] = useState(8);
 // This should log 8, 16, or 32
     const productstoShow = ProductData;
@@ -17,7 +17,7 @@ export default function Shop({ productsToShow, cardsToShow, setCardsToShow, addT
             <SubHeroImg pageName={"Shop"} />
             <Sortproducts cardsToShow={cardsToShow} setCardsToShow={setCardsToShow} ProductData={ProductData} />
             <div className={styles.productContainer}>
-                <Products cardsToShow={cardsToShow} productsToShow={productstoShow} addToCart={addToCart}  />
+                <Products cardsToShow={cardsToShow} productsToShow={productsToShow} addToCart={addToCart} toggleLike={toggleLike} isProductLiked={isProductLiked} />
             </div>
             <div className="guaranteeContainer">
                 <Guarantees />

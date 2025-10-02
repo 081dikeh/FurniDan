@@ -3,7 +3,7 @@ import Range from './homepage-components/Range'
 import OurProduct from './homepage-components/productFolder/OurProduct';
 import ShareSetup from './homepage-components/ShareSetup';
 
-export default function Homepage({ productsToShow, addToCart }) {
+export default function Homepage({ productsToShow, addToCart, toggleLike, isProductLiked }) {
     return (
         <div className={styles.homepage}>
             <section className={styles.hero}>
@@ -17,8 +17,8 @@ export default function Homepage({ productsToShow, addToCart }) {
                 </div>
             </section>
             <Range />
-            <OurProduct productsToShow={productsToShow} cardsToShow={8} addToCart={addToCart} />
+            <OurProduct productsToShow={productsToShow} cardsToShow={8} addToCart={addToCart} toggleLike={toggleLike} isProductLiked={isProductLiked} />
             <ShareSetup />
         </div>
     )
-} 
+}  

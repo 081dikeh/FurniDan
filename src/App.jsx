@@ -11,12 +11,32 @@ import SingleProduct from "./pages/Singleproduct/SingleProduct";
 import SideBarCart from "./pages/Cartpage/SideBarCart";
 import CartPage from "./pages/Cartpage/CartPage";
 import Checkout from "./pages/Checkoutpage/Checkout";
+import LikedProducts from "./pages/Likedproductspage/LikedProducts";
 
 function App() {
   const [isTrue, setIsTrue] = useState(false);
   const productsToShow = ProductData;
   const productIds = productsToShow.map((product) => product.id);
   const [cardsToShow, setCardsToShow] = useState(8);
+
+  //for the liked products functionality
+  const [likedProducts, setLikedProducts] = useState([]);
+
+  const toggleLike = (product) => {
+    setLikedProducts(prev => {
+      const isAlreadyLiked = prev.find(p => p.id === product.id);
+      if (isAlreadyLiked) {
+        return prev.filter(p => p.id !== product.id);
+      } else {
+        return [...prev, product];
+      }
+    });
+  };
+  // Check if product is liked
+  const isProductLiked = (productId) => {
+    return likedProducts.some(p => p.id === productId);
+  };
+
 
   //for the cartfunctionality
   const [cartItems, setCartItems] = useState([])
@@ -71,7 +91,12 @@ const updateCartItemQuantity = (productId, newQuantity) => {
       <Routes>
         <Route
           path="/"
-          element={<Homepage productsToShow={productsToShow} addToCart={addToCart} />}
+          element={<Homepage 
+                    productsToShow={productsToShow} 
+                    addToCart={addToCart} 
+                    toggleLike={toggleLike}
+                    isProductLiked={isProductLiked}
+                  />}
         />
         <Route
           path="/shop"
@@ -81,6 +106,8 @@ const updateCartItemQuantity = (productId, newQuantity) => {
               cardsToShow={cardsToShow}
               setCardsToShow={setCardsToShow}
               addToCart={addToCart}
+              toggleLike={toggleLike}
+              isProductLiked={isProductLiked}
             />
           }
         />
@@ -110,6 +137,10 @@ const updateCartItemQuantity = (productId, newQuantity) => {
           } 
         />
         <Route path="/checkout" element={<Checkout cartItems={cartItems}/>} />
+        <Route path="/likedproducts" element={<LikedProducts likedProducts={likedProducts}
+              toggleLike={toggleLike}
+              addToCart={addToCart} 
+              isProductLiked={isProductLiked} />}  />
       </Routes>
 
       {isTrue ? (

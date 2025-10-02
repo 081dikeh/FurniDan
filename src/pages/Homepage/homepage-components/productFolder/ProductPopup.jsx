@@ -1,4 +1,5 @@
 import likeIcon from '../../../../assets/ourProductassets/like-icon.png'
+import likedicon from '../../../../assets/ourProductassets/liked-icon.png'
 import compareIcon from '../../../../assets/ourProductassets/compare-icon.png'
 import shareIcon from '../../../../assets/ourProductassets/share-icon.png'
 import styles from './productcssfolder/productpopup.module.css';
@@ -6,8 +7,9 @@ import { useNavigate } from "react-router-dom";
 import { useState } from 'react';
 import AddToCartBtn from '../../../../components/AddToCartBtn';
 
-export default function ProductPopup({ productId, product, addToCart }) {
+export default function ProductPopup({ productId, product, addToCart, toggleLike, isProductLiked }) {
     const navigate = useNavigate();
+    
 
     return (
 
@@ -36,7 +38,11 @@ export default function ProductPopup({ productId, product, addToCart }) {
                     <span>Compare</span>
                 </button>
                 <button>
-                    <img src={likeIcon} alt="" />
+                    <img 
+                        src={isProductLiked(product.id) ? likedicon : likeIcon} 
+                        alt=""
+                        onClick={() => toggleLike(product)}
+                    />
                     <span>Like</span>
                 </button>
             </div>
