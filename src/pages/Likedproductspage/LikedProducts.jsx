@@ -1,22 +1,7 @@
-/* import Products from "../Homepage/homepage-components/productFolder/Products";
-
- export default function LikedProducts({ likedProducts, toggleLike, addToCart }) {
-  console.log(likedProducts);
-  return (
-    <div>
-      <h2>Your Liked Products</h2>
-      
-      {likedProducts.length === 0 ? (
-        <p>No liked products yet. Start adding some!</p>
-      ) : (
-        {likedProducts.map( pro)}
-      )}
-    </div>
-  );
-} */
 import styles from "./likedproductscss/likedproducts.module.css"
 import Product from "../Homepage/homepage-components/productFolder/Product";
 import SubHeroImg from "../../components/SubHeroImg";
+import Guarantees from "../../components/Guarantees";
 
 
 function LikedProducts({ likedProducts, toggleLike, addToCart, isProductLiked }) {
@@ -42,6 +27,7 @@ function LikedProducts({ likedProducts, toggleLike, addToCart, isProductLiked })
           ))}
         </div>
       )}
+      <Guarantees />
     </div>
   );
 }

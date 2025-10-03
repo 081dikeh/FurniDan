@@ -10,7 +10,7 @@ export default function Footer() {
           <div className={styles.footerAddress}>
             <p>400 University Drive Suite 200 Coral Gables,<br/>FL 33134 USA</p>
           </div>
-        </div>
+        </div> 
 
         <div className={styles.footerLinks}>
           <ul>

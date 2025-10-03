@@ -8,7 +8,7 @@ export default function BillingDetails() {
                 <h1>Billing Details</h1>
                 <div className={styles.formGroup} id={styles.nameGroup}>
                     <div>
-                        <label htmlFor="firstName">First Name</label>``
+                        <label htmlFor="firstName">First Name</label>
                         <input type="text" id="firstName" name="firstName" />
                     </div>
                     

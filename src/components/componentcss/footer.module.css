@@ -59,10 +59,11 @@ input[type="email"] {
     margin-top: 2.5em;
 }
 .subscribe button {
-    background: none;
+    background: #FAF3EA;
     border: none;
-    border-bottom: 1px solid #000;
-    padding: 0.5em 0;
+    border: 1px solid #000;
+    border-radius: 5px;
+    padding: 0.5em 0.5em;
     font-family: poppins, sans-serif;
     cursor: pointer;
     text-transform: uppercase;
@@ -135,7 +136,7 @@ input[type="email"] {
     }
     
     .footerLogoSection {
-        text-align: center;
+        text-align: left;
     }
     
     .footerLogo {
@@ -154,7 +155,7 @@ input[type="email"] {
     
     footer ul {
         gap: 1.5em;
-        text-align: center;
+        text-align: left;
     }
     
     .linkHead {

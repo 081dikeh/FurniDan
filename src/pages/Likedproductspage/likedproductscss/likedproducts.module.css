@@ -3,17 +3,131 @@
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 1.5em;
     padding: 0 4em 2em;
+    max-width: 1440px;
+    margin: 0 auto;
+    box-sizing: border-box;
 }
+
 .hrLiked {
     border: none;
     border-top: 1px solid #ccc;
     margin: 4em 0;
     width: 100%;
 }
+
 .noLikedProductsText {
     text-align: center;
     font-size: 1.5em;
     color: #555;
     margin-top: 2em;
     padding: 3em;
+}
+
+/* Large desktop */
+@media (max-width: 1440px) {
+    .likedproductsContainer {
+        padding: 0 3em 2em;
+    }
+}
+
+/* Desktop / Laptop */
+@media (max-width: 1200px) {
+    .likedproductsContainer {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        padding: 0 2.5em 2em;
+    }
+    
+    .hrLiked {
+        margin: 3em 0;
+    }
+}
+
+/* Tablet landscape */
+@media (max-width: 1024px) {
+    .likedproductsContainer {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        padding: 0 2em 2em;
+        gap: 1.3em;
+    }
+    
+    .hrLiked {
+        margin: 2.5em 0;
+    }
+    
+    .noLikedProductsText {
+        font-size: 1.3em;
+        padding: 2.5em;
+    }
+}
+
+/* Tablet portrait */
+@media (max-width: 768px) {
+    .likedproductsContainer {
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        padding: 0 1.5em 1.5em;
+        gap: 1.2em;
+    }
+    
+    .hrLiked {
+        margin: 2em 0;
+    }
+    
+    .noLikedProductsText {
+        font-size: 1.2em;
+        padding: 2em;
+        margin-top: 1.5em;
+    }
+}
+
+/* Mobile landscape / Large mobile */
+@media (max-width: 640px) {
+    .likedproductsContainer {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        padding: 0 1.2em 1.5em;
+    }
+}
+
+/* Mobile portrait */
+@media (max-width: 480px) {
+    .likedproductsContainer {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        padding: 0 1em 1.5em;
+        gap: 1em;
+    }
+    
+    .hrLiked {
+        margin: 1.5em 0;
+    }
+    
+    .noLikedProductsText {
+        font-size: 1.1em;
+        padding: 1.5em 1em;
+        margin-top: 1em;
+    }
+}
+
+/* Small mobile */
+@media (max-width: 360px) {
+    .likedproductsContainer {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+        padding: 0 0.75em 1em;
+        gap: 0.8em;
+    }
+    
+    .hrLiked {
+        margin: 1em 0;
+    }
+    
+    .noLikedProductsText {
+        font-size: 1em;
+        padding: 1em 0.75em;
+    }
+}
+
+/* Ensure grid items are responsive */
+@media (max-width: 768px) {
+    .likedproductsContainer > * {
+        min-width: 0;
+        overflow: hidden;
+    }
 }
