@@ -40,7 +40,7 @@ export default function Footer() {
       </div>
 
       <div className={styles.copyright}>
-        <p>2023 furnidan. All rights reverved</p>
+        <p>2025 @furnidan. All rights reverved</p>
       </div>
     </footer>
   );
