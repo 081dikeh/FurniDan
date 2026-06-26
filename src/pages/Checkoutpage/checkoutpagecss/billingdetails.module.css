@@ -1,150 +1,23 @@
-.billingDetailsContainer {
-    flex-basis: 50%;
+.billingForm { flex: 1; }
+.formTitle { font-family:'Playfair Display',serif; font-size:1.5rem; font-weight:700; color:#3A3A3A; margin-bottom:24px; }
+.formGrid { display:grid; grid-template-columns:1fr 1fr; gap:16px 20px; margin-bottom:20px; }
+.fieldGroup { display:flex; flex-direction:column; gap:6px; grid-column:1/-1; }
+.half { grid-column:auto; }
+.label { font-size:13px; font-weight:500; color:#3A3A3A; font-family:'Poppins',sans-serif; }
+.req { color:#C0533A; margin-left:3px; }
+.input {
+  border:1.5px solid #D9D9D9; border-radius:8px; padding:11px 14px;
+  font-size:14px; font-family:'Poppins',sans-serif; color:#3A3A3A;
+  outline:none; transition:border-color .2s; background:#fff; width:100%;
 }
-
-.form {
-    display: flex;
-    flex-direction: column;
-    max-width: 600px;
-    padding: 35px 75px 75px;
-    gap: 36px;
+.input:focus { border-color:#B88E2F; }
+.inputError { border-color:#C0533A; background:#FFF8F7; }
+.errorMsg { font-size:12px; color:#C0533A; font-family:'Poppins',sans-serif; }
+.notesGroup { display:flex; flex-direction:column; gap:6px; }
+.textarea {
+  border:1.5px solid #D9D9D9; border-radius:8px; padding:11px 14px;
+  font-size:14px; font-family:'Poppins',sans-serif; color:#3A3A3A;
+  outline:none; resize:vertical; transition:border-color .2s; background:#fff;
 }
-
-.form h1 {
-    color: #000;
-    font-family: 'Roboto', sans-serif;
-    font-size: 36px;
-    font-weight: 600;
-}
-
-.formGroup {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    width: 100%;
-}
-
-.formGroup label {
-    color: #000;
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    font-weight: 600;
-    margin: 0;
-}
-
-.formGroup input {
-    color: #000;
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    font-weight: 500;
-    padding: 20px 26px;
-    border-radius: 10px;
-    border: 1px solid #9F9F9F;
-    background: #FFF;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-#nameGroup {
-    flex-direction: row;
-    display: flex;
-    gap: 20px;
-}
-
-#nameGroup div {
-    flex-direction: column;
-    display: flex;
-    width: 100%;
-    gap: 16px;
-}
-
-#nameGroup div input {
-    width: 100%;
-}
-
-/* ==========================================================================
-   Responsive Styles
-   ========================================================================== */
-
-/* Tablet and below (768px) */
-@media (max-width: 768px) {
-    .billingDetailsContainer {
-        flex-basis: 100%;
-    }
-
-    .form {
-        padding: 30px 40px 50px;
-        gap: 28px;
-        max-width: 100%;
-    }
-
-    .form h1 {
-        font-size: 28px;
-    }
-
-    .formGroup label {
-        font-size: 15px;
-    }
-
-    .formGroup input {
-        padding: 16px 20px;
-        font-size: 15px;
-    }
-
-    /* Stack name fields on smaller tablets if needed */
-    #nameGroup {
-        gap: 16px;
-    }
-}
-
-/* Mobile (480px) */
-@media (max-width: 480px) {
-    .form {
-        padding: 20px 20px 40px;
-        gap: 24px;
-    }
-
-    .form h1 {
-        font-size: 24px;
-    }
-
-    .formGroup {
-        gap: 12px;
-    }
-
-    .formGroup label {
-        font-size: 14px;
-    }
-
-    .formGroup input {
-        padding: 14px 16px;
-        font-size: 14px;
-    }
-
-    /* Stack First Name and Last Name vertically on mobile */
-    #nameGroup {
-        flex-direction: column;
-        gap: 24px;
-    }
-
-    #nameGroup div {
-        gap: 12px;
-    }
-}
-
-/* Extra small mobile (360px) */
-@media (max-width: 360px) {
-    .form {
-        padding: 15px 15px 30px;
-        gap: 20px;
-    }
-
-    .form h1 {
-        font-size: 22px;
-    }
-
-    .formGroup input {
-        padding: 12px 14px;
-        font-size: 13px;
-    }
-}
+.textarea:focus { border-color:#B88E2F; }
+@media(max-width:600px){ .formGrid{grid-template-columns:1fr;} .half{grid-column:auto;} }

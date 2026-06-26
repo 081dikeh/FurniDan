@@ -1,0 +1,15 @@
+.addToCartBtn {
+  background: #B88E2F;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 11px 22px;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+  white-space: nowrap;
+}
+.addToCartBtn:hover { background: #9E7A28; }
+.addToCartBtn:active { transform: scale(0.97); }

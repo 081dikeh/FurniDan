@@ -1,24 +1,144 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    list-style: none;
-    font-family: 'Poppins', sans-serif;
-}
-.App {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    margin-top: 4em;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.sidebarcart {
-    position: fixed;
-    top: 0;
-    right: 0;
-    height: 100vh;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.2);
-    z-index: 100;
+:root {
+  --gold: #B88E2F;
+  --gold-dark: #9E7A28;
+  --cream: #F9F1E7;
+  --dark: #3A3A3A;
+  --text-muted: #9F9F9F;
+  --border: #D9D9D9;
+  --error: #C0392B;
+  --success: #2A6B4A;
+  --terracotta: #C0533A;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--dark);
+  background: #fff;
+  overflow-x: hidden;
+}
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  /* account for fixed nav */
+  padding-top: 80px;
+}
+
+/* Cart overlay */
+.cartOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 90;
+  backdrop-filter: blur(1px);
+}
+
+/* Global button resets */
+button {
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Shared page hero banner */
+.pageHero {
+  background: var(--cream);
+  padding: 3em 5.5em;
+  border-bottom: 1px solid var(--border);
+}
+
+.pageHero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.25rem;
+  color: var(--dark);
+  font-weight: 700;
+}
+
+.pageHero .breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 6px;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.pageHero .breadcrumb a {
+  color: var(--text-muted);
+  transition: color 0.2s;
+}
+
+.pageHero .breadcrumb a:hover {
+  color: var(--gold);
+}
+
+.pageHero .breadcrumb .current {
+  color: var(--dark);
+  font-weight: 500;
+}
+
+/* Global primary button */
+.btnPrimary {
+  background: var(--gold);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 28px;
+  font-size: 15px;
+  font-weight: 500;
+  transition: background 0.2s, transform 0.1s;
+}
+.btnPrimary:hover { background: var(--gold-dark); }
+.btnPrimary:active { transform: scale(0.97); }
+
+/* Global outline button */
+.btnOutline {
+  background: none;
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  padding: 11px 26px;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--dark);
+  transition: border-color 0.2s, background 0.2s;
+}
+.btnOutline:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+/* Empty state */
+.emptyState {
+  text-align: center;
+  padding: 5em 2em;
+  color: var(--text-muted);
+}
+.emptyState .emptyIcon {
+  font-size: 4rem;
+  margin-bottom: 16px;
+  display: block;
+}
+.emptyState h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  color: var(--dark);
+  margin-bottom: 8px;
+}
+.emptyState p {
+  font-size: 14px;
+  margin-bottom: 20px;
+  line-height: 1.6;
 }

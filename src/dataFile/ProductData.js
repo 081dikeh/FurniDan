@@ -6,335 +6,233 @@ import productImg5 from '../assets/ourProductassets/product-img5.png'
 import productImg6 from '../assets/ourProductassets/product-img6.png'
 import productImg7 from '../assets/ourProductassets/product-img7.png'
 import productImg8 from '../assets/ourProductassets/product-img8.png'
-import fullStar from '../assets/ourProductassets/fullstar.png'
-import halfStar from '../assets/ourProductassets/halfstar.png'
 import stars from '../assets/ourProductassets/4.5star.png'
 
-
 const ourProducts = [
-    {   
-        id: 1,
-        name: 'Syltherine',
-        image: productImg1,
-        type: 'Stylish cafe chair',
-        price: 2500000,
-        StarRating: stars,
-        priceDiscount: {
-            isTrue: true,
-            slicedPrice: 'Rp 3.500.000'
-        },
-        discounted: {
-            isTrue: true,
-            discountTag: '-30%'
-        },
-        new: {
-            isTrue: false,
-            newTag: 'New'
-        }
-    },
-    {
-        id: 2,
-        name: 'Leviosa',
-        image: productImg2,
-        type: 'Stylish cafe chair',
-        price: 2500000,
-        StarRating: stars,
-        priceDiscount: {
-            isTrue: false,
-            slicedPrice: 3500000,
-        },
-        discounted: {
-            isTrue: false,
-            discountTag: '-30%'
-        },
-        new: {
-            isTrue: false,
-            newTag: 'New'
-        }
-    },
-    {
-        id: 3,
-        name: 'Lolito',
-        image: productImg3,
-        type: 'Luxury big sofa',
-        price: 7000000,
-        StarRating: stars,
-        priceDiscount: {
-            isTrue: true,
-            slicedPrice: 'Rp 14.000.000'
-        },
-        discounted: {
-            isTrue: true,
-            discountTag: '-50%'
-        },
-        new: {
-            isTrue: false,
-            newTag: 'New'
-        }
-    },
-    {
-        id: 4,
-        name: 'Respira',
-        image: productImg4,
-        type: 'Outdoor bar table and stool',
-        price: 500000,
-        priceDiscount: {
-            isTrue: false,
-            slicedPrice: 'Rp 14.000.000'
-        },
-        StarRating: stars,
-        discounted: {
-            isTrue: false,
-            discountTag: '-50%'
-        },
-        new: {
-            isTrue: true,
-            newTag: 'New'
-        }
-    },
-    {
-        id: 5,
-        name: 'Grifo',
-        image: productImg5,
-        type: 'Night lamp',
-        price: 1500000,
-        StarRating: stars,
-        priceDiscount: {
-            isTrue: false,
-            slicedPrice: 'Rp 14.000.000'
-        },
-        discounted: {
-            isTrue: false,
-            discountTag: '-50%'
-        },
-        new: {
-            isTrue: false,
-            newTag: 'New'
-        }
-    },
-    {
-        id: 6,
-        name: 'Muggo',
-        image: productImg6,
-        type: 'Small mug',
-        price: 150000,
-        StarRating: stars,
-        priceDiscount: {
-            isTrue: false,
-            slicedPrice: 'Rp 14.000.000'
-        },
-        discounted: {
-            isTrue: false,
-            discountTag: '-50%'
-        },
-        new: {
-            isTrue: true,
-            newTag: 'New'
-        }
-    },
-    {
-        id: 7,
-        name: 'Pingky',
-        image: productImg7,
-        type: 'Cute bed set',
-        price: 7000000,
-        StarRating: stars,
-        priceDiscount: {
-            isTrue: true,
-            slicedPrice: 'Rp 14.000.000'
-        },
-        discounted: {
-            isTrue: true,
-            discountTag: '-50%'
-        },
-        new: {
-            isTrue: false,
-            newTag: 'New'
-        }
-    },
-    {
-        id: 8,
-        name: 'Potty',
-        image: productImg8,
-        type: 'Minimalist flower pot',
-        price: 500000,
-        StarRating: stars,
-        priceDiscount: {
-            isTrue: false,
-            slicedPrice: 'Rp 14.000.000'
-        },
-        discounted: {
-            isTrue: false,
-            discountTag: '-50%'
-        },
-        new: {
-            isTrue: true,
-            newTag: 'New'
-        }
-    },
-    {   
-        id: 9,
-        name: 'Syltherine',
-        image: productImg1,
-        type: 'Stylish cafe chair',
-        price: 2500000,
-        StarRating: stars,
-        priceDiscount: {
-            isTrue: true,
-            slicedPrice: 'Rp 3.500.000'
-        },
-        discounted: {
-            isTrue: true,
-            discountTag: '-30%'
-        },
-        new: {
-            isTrue: false,
-            newTag: 'New'
-        }
-    },
-    {
-        id: 10,
-        name: 'Leviosa',
-        image: productImg2,
-        type: 'Stylish cafe chair',
-        price: 2500000,
-        StarRating: stars,
-        priceDiscount: {
-            isTrue: false,
-            slicedPrice: 'Rp 3.500.000'
-        },
-        discounted: {
-            isTrue: false,
-            discountTag: '-30%'
-        },
-        new: {
-            isTrue: false,
-            newTag: 'New'
-        }
-    },
-    {
-        id: 11,
-        name: 'Lolito',
-        image: productImg3,
-        type: 'Luxury big sofa',
-        price: 7000000,
-        StarRating: stars,
-        priceDiscount: {
-            isTrue: true,
-            slicedPrice: 'Rp 14.000.000'
-        },
-        discounted: {
-            isTrue: true,
-            discountTag: '-50%'
-        },
-        new: {
-            isTrue: false,
-            newTag: 'New'
-        }
-    },
-    {
-        id: 12,
-        name: 'Respira',
-        image: productImg4,
-        type: 'Outdoor bar table and stool',
-        price: 500000,
-        StarRating: stars,
-        priceDiscount: {
-            isTrue: false,
-            slicedPrice: 'Rp 14.000.000'
-        },
-        discounted: {
-            isTrue: false,
-            discountTag: '-50%'
-        },
-        new: {
-            isTrue: true,
-            newTag: 'New'
-        }
-    },
-    {
-        id: 13,
-        name: 'Grifo',
-        image: productImg5,
-        type: 'Night lamp',
-        price: 1500000,
-        StarRating: stars,
-        priceDiscount: {
-            isTrue: false,
-            slicedPrice: 'Rp 14.000.000'
-        },
-        discounted: {
-            isTrue: false,
-            discountTag: '-50%'
-        },
-        new: {
-            isTrue: false,
-            newTag: 'New'
-        }
-    },
-    {
-        id: 14,
-        name: 'Muggo',
-        image: productImg6,
-        type: 'Small mug',
-        price: 150000,
-        StarRating: stars,
-        priceDiscount: {
-            isTrue: false,
-            slicedPrice: 'Rp 14.000.000'
-        },
-        discounted: {
-            isTrue: false,
-            discountTag: '-50%'
-        },
-        new: {
-            isTrue: true,
-            newTag: 'New'
-        }
-    },
-    {
-        id: 15,
-        name: 'Pingky',
-        image: productImg7,
-        type: 'Cute bed set',
-        price: 7000000,
-        StarRating: stars,
-        priceDiscount: {
-            isTrue: true,
-            slicedPrice: 'Rp 14.000.000'
-        },
-        discounted: {
-            isTrue: true,
-            discountTag: '-50%'
-        },
-        new: {
-            isTrue: false,
-            newTag: 'New'
-        }
-    },
-    {
-        id: 16,
-        name: 'Potty',
-        image: productImg8,
-        type: 'Minimalist flower pot',
-        price: 500000,
-        StarRating: stars,
-        priceDiscount: {
-            isTrue: false,
-            slicedPrice: 'Rp 14.000.000'
-        },
-        discounted: {
-            isTrue: false,
-            discountTag: '-50%'
-        },
-        new: {
-            isTrue: true,
-            newTag: 'New'
-        }
-    },
+  {
+    id: 1,
+    name: 'Syltherine',
+    image: productImg1,
+    type: 'Stylish cafe chair',
+    category: 'Chairs',
+    price: 2500000,
+    StarRating: stars,
+    colors: ['#8B4513', '#2C2C2C', '#D4B483'],
+    sizes: ['S', 'M', 'L', 'XL'],
+    priceDiscount: { isTrue: true, slicedPrice: 'Rp 3.500.000', rawPrice: 3500000 },
+    discounted: { isTrue: true, discountTag: '-30%' },
+    new: { isTrue: false, newTag: 'New' }
+  },
+  {
+    id: 2,
+    name: 'Leviosa',
+    image: productImg2,
+    type: 'Stylish cafe chair',
+    category: 'Chairs',
+    price: 2500000,
+    StarRating: stars,
+    colors: ['#F5F5F5', '#8B8B8B', '#2C2C2C'],
+    sizes: ['M', 'L', 'XL'],
+    priceDiscount: { isTrue: false, slicedPrice: '', rawPrice: 0 },
+    discounted: { isTrue: false, discountTag: '' },
+    new: { isTrue: false, newTag: 'New' }
+  },
+  {
+    id: 3,
+    name: 'Lolito',
+    image: productImg3,
+    type: 'Luxury big sofa',
+    category: 'Sofas',
+    price: 7000000,
+    StarRating: stars,
+    colors: ['#3A5F77', '#8B4513', '#1A1A1A'],
+    sizes: ['L', 'XL'],
+    priceDiscount: { isTrue: true, slicedPrice: 'Rp 14.000.000', rawPrice: 14000000 },
+    discounted: { isTrue: true, discountTag: '-50%' },
+    new: { isTrue: false, newTag: 'New' }
+  },
+  {
+    id: 4,
+    name: 'Respira',
+    image: productImg4,
+    type: 'Outdoor bar table and stool',
+    category: 'Tables',
+    price: 500000,
+    StarRating: stars,
+    colors: ['#C0C0C0', '#2C2C2C'],
+    sizes: ['One Size'],
+    priceDiscount: { isTrue: false, slicedPrice: '', rawPrice: 0 },
+    discounted: { isTrue: false, discountTag: '' },
+    new: { isTrue: true, newTag: 'New' }
+  },
+  {
+    id: 5,
+    name: 'Grifo',
+    image: productImg5,
+    type: 'Night lamp',
+    category: 'Lighting',
+    price: 1500000,
+    StarRating: stars,
+    colors: ['#F5F5DC', '#2C2C2C'],
+    sizes: ['One Size'],
+    priceDiscount: { isTrue: false, slicedPrice: '', rawPrice: 0 },
+    discounted: { isTrue: false, discountTag: '' },
+    new: { isTrue: false, newTag: 'New' }
+  },
+  {
+    id: 6,
+    name: 'Muggo',
+    image: productImg6,
+    type: 'Small mug',
+    category: 'Accessories',
+    price: 150000,
+    StarRating: stars,
+    colors: ['#FAFAFA', '#8B4513', '#D4A853'],
+    sizes: ['One Size'],
+    priceDiscount: { isTrue: false, slicedPrice: '', rawPrice: 0 },
+    discounted: { isTrue: false, discountTag: '' },
+    new: { isTrue: true, newTag: 'New' }
+  },
+  {
+    id: 7,
+    name: 'Pingky',
+    image: productImg7,
+    type: 'Cute bed set',
+    category: 'Beds',
+    price: 7000000,
+    StarRating: stars,
+    colors: ['#FFB6C1', '#F5F5DC', '#FFFFFF'],
+    sizes: ['Queen', 'King'],
+    priceDiscount: { isTrue: true, slicedPrice: 'Rp 14.000.000', rawPrice: 14000000 },
+    discounted: { isTrue: true, discountTag: '-50%' },
+    new: { isTrue: false, newTag: 'New' }
+  },
+  {
+    id: 8,
+    name: 'Potty',
+    image: productImg8,
+    type: 'Minimalist flower pot',
+    category: 'Accessories',
+    price: 500000,
+    StarRating: stars,
+    colors: ['#F5F5DC', '#8B8B8B', '#2C2C2C'],
+    sizes: ['S', 'M', 'L'],
+    priceDiscount: { isTrue: false, slicedPrice: '', rawPrice: 0 },
+    discounted: { isTrue: false, discountTag: '' },
+    new: { isTrue: true, newTag: 'New' }
+  },
+  {
+    id: 9,
+    name: 'Syltherine',
+    image: productImg1,
+    type: 'Stylish cafe chair',
+    category: 'Chairs',
+    price: 2500000,
+    StarRating: stars,
+    colors: ['#8B4513', '#2C2C2C', '#D4B483'],
+    sizes: ['S', 'M', 'L', 'XL'],
+    priceDiscount: { isTrue: true, slicedPrice: 'Rp 3.500.000', rawPrice: 3500000 },
+    discounted: { isTrue: true, discountTag: '-30%' },
+    new: { isTrue: false, newTag: 'New' }
+  },
+  {
+    id: 10,
+    name: 'Leviosa',
+    image: productImg2,
+    type: 'Stylish cafe chair',
+    category: 'Chairs',
+    price: 2500000,
+    StarRating: stars,
+    colors: ['#F5F5F5', '#8B8B8B'],
+    sizes: ['M', 'L', 'XL'],
+    priceDiscount: { isTrue: false, slicedPrice: '', rawPrice: 0 },
+    discounted: { isTrue: false, discountTag: '' },
+    new: { isTrue: false, newTag: 'New' }
+  },
+  {
+    id: 11,
+    name: 'Lolito',
+    image: productImg3,
+    type: 'Luxury big sofa',
+    category: 'Sofas',
+    price: 7000000,
+    StarRating: stars,
+    colors: ['#3A5F77', '#8B4513'],
+    sizes: ['L', 'XL'],
+    priceDiscount: { isTrue: true, slicedPrice: 'Rp 14.000.000', rawPrice: 14000000 },
+    discounted: { isTrue: true, discountTag: '-50%' },
+    new: { isTrue: false, newTag: 'New' }
+  },
+  {
+    id: 12,
+    name: 'Respira',
+    image: productImg4,
+    type: 'Outdoor bar table and stool',
+    category: 'Tables',
+    price: 500000,
+    StarRating: stars,
+    colors: ['#C0C0C0', '#2C2C2C'],
+    sizes: ['One Size'],
+    priceDiscount: { isTrue: false, slicedPrice: '', rawPrice: 0 },
+    discounted: { isTrue: false, discountTag: '' },
+    new: { isTrue: true, newTag: 'New' }
+  },
+  {
+    id: 13,
+    name: 'Grifo',
+    image: productImg5,
+    type: 'Night lamp',
+    category: 'Lighting',
+    price: 1500000,
+    StarRating: stars,
+    colors: ['#F5F5DC', '#2C2C2C'],
+    sizes: ['One Size'],
+    priceDiscount: { isTrue: false, slicedPrice: '', rawPrice: 0 },
+    discounted: { isTrue: false, discountTag: '' },
+    new: { isTrue: false, newTag: 'New' }
+  },
+  {
+    id: 14,
+    name: 'Muggo',
+    image: productImg6,
+    type: 'Small mug',
+    category: 'Accessories',
+    price: 150000,
+    StarRating: stars,
+    colors: ['#FAFAFA', '#8B4513'],
+    sizes: ['One Size'],
+    priceDiscount: { isTrue: false, slicedPrice: '', rawPrice: 0 },
+    discounted: { isTrue: false, discountTag: '' },
+    new: { isTrue: true, newTag: 'New' }
+  },
+  {
+    id: 15,
+    name: 'Pingky',
+    image: productImg7,
+    type: 'Cute bed set',
+    category: 'Beds',
+    price: 7000000,
+    StarRating: stars,
+    colors: ['#FFB6C1', '#FFFFFF'],
+    sizes: ['Queen', 'King'],
+    priceDiscount: { isTrue: true, slicedPrice: 'Rp 14.000.000', rawPrice: 14000000 },
+    discounted: { isTrue: true, discountTag: '-50%' },
+    new: { isTrue: false, newTag: 'New' }
+  },
+  {
+    id: 16,
+    name: 'Potty',
+    image: productImg8,
+    type: 'Minimalist flower pot',
+    category: 'Accessories',
+    price: 500000,
+    StarRating: stars,
+    colors: ['#F5F5DC', '#8B8B8B', '#2C2C2C'],
+    sizes: ['S', 'M', 'L'],
+    priceDiscount: { isTrue: false, slicedPrice: '', rawPrice: 0 },
+    discounted: { isTrue: false, discountTag: '' },
+    new: { isTrue: true, newTag: 'New' }
+  },
 ]
 
-export default ourProducts;
-
-
-
+export default ourProducts
